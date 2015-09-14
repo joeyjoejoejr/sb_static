@@ -1,0 +1,178 @@
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Smashing-Boxes';
+  src: font-url('Smashing-Boxes.eot');
+  src: url(font-path('Smashing-Boxes.eot') + '?#iefix') format('embedded-opentype'), font-url('Smashing-Boxes.woff') format('woff'), font-url('Smashing-Boxes.ttf') format('truetype'), url(font-path('Smashing-Boxes.svg') + '?#Smashing-Boxes') format('svg');
+}
+
+[class^='icon-'],
+[class*='icon-']{
+  @extend %ease-trans;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: 'Smashing-Boxes';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sb-close {
+  &:before {
+    content: "\e611";
+  }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.icon-sb-dribble {
+  &:before {
+    content: "\e603";
+  }
+
+  &:hover {
+    color: #c73b6f;
+  }
+}
+
+.icon-sb-facebook {
+  &:before {
+    content: "\e604";
+  }
+
+  &:hover {
+    color: #3b5998;
+  }
+}
+
+.icon-sb-google {
+  &:before {
+    content: "\e605";
+  }
+
+  &:hover {
+    color: #c63d2d;
+  }
+}
+
+.icon-sb-instagram {
+  &:before {
+    content: "\e619";
+  }
+
+  &:hover {
+    color: #517fa4;
+  }
+}
+
+.icon-sb-linkedin {
+  &:before {
+    content: "\e607";
+  }
+
+  &:hover {
+    color: #4875b4;
+  }
+}
+
+.icon-sb-next {
+  &:before {
+    content: "\e61e";
+  }
+  
+  &:hover {
+    color: $pink;
+  }
+}
+
+.icon-sb-prev {
+  &:before {
+    content: '\e621';
+  }
+  
+  &:hover {
+    color: $pink;
+  }
+}
+
+.icon-sb-twitter {
+  &:before {
+    content: "\e60c";
+  }
+
+  &:hover {
+    color: #4099ff;
+  }
+}
+
+.icon-sb-closed-quotes:before {
+  content: "\e601";
+}
+
+.icon-sb_design:before {
+  content: "\e602";
+}
+
+.icon-sb-open-quotes:before {
+  content: "\e608";
+}
+
+.icon-sb-logo:before {
+  content: "\e60a";
+}
+
+.icon-sb-business-dev:before {
+  content: "\e610";
+}
+
+.icon-sb-creativity:before {
+  content: "\e613";
+}
+
+.icon-sb-design:before {
+  content: "\e602";
+}
+
+.icon-sb-development:before {
+  content: "\e615";
+}
+
+.icon-sb-knowledge:before {
+  content: "\e61b";
+}
+
+.icon-sb-mobile:before {
+  content: "\e61d";
+}
+
+.icon-sb-pr:before {
+  content: "\e620";
+}
+
+.icon-sb-quality:before {
+  content: "\e622";
+}
+
+.icon-sb-mark:before {
+  content: "\e625";
+}
+
+.icon-sb-mark-contact:before {
+  @extend .icon-sb-mark;
+  font-size: 0.8em;
+}
+
+.icon-sb-slider-arrow-left:before {
+  content: "\e606";
+}
+.icon-sb-slider-arrow-right:before {
+  content: "\e600";
+}
+
+
+

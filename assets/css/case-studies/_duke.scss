@@ -1,0 +1,52 @@
+.case_study_duke {
+  .theme-block-1 {
+    background-color: #f0f0f0;
+
+    .button {
+      @include button(#41c1d1, $white);
+      
+      @media #{$small-only} {
+        padding: 15px 25px;
+      }
+    }
+  }
+
+  .quote span,
+  .quote-mark,
+  .author-ideas:hover {
+    color: #41c1d1;
+  }
+
+  .theme-block-2 {
+    background: #f0f0f0;
+
+    .quote-mark {
+      color: $md-grey;
+    }
+  }
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: #41c1d1;
+    }
+  }
+
+  .theme-block-4 {
+    background: #41c1d1;
+    color: $white;
+
+    .quote span,
+    .quote-mark,
+    .author-ideas i {
+      color: $white;
+    }
+
+    .author-ideas:hover {
+      color: $black;
+    }
+  }
+
+  .title {
+    color: $black;
+  }
+}

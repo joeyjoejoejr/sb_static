@@ -1,0 +1,65 @@
+$fb-red: #7b0124;
+
+.case_study_farm_bureau {
+  .blur-img,
+  .blur-img > div {
+    min-height: 740px;
+    max-height: 740px;
+
+    .blur {
+      opacity: 0 !important;
+    }
+  }
+
+  .theme-block-1 {
+    background-color: #f0f0f0;
+
+    .button {
+      @include button($fb-red, $white);
+
+      &.app {
+        margin: 0 5px;
+      }
+
+    }
+  }
+
+  .theme-block-2 {
+    background: $white;
+    color: $fb-red;
+
+    h5,
+    .author-ideas {
+      color: $dk-grey;
+    }
+
+    .author-ideas:hover {
+      color: #fe9f24;
+    }
+  }
+
+  .theme-block-3,
+  .theme-block-5 {
+    padding-top: 0;
+  }
+
+  .section-white {
+    
+    .quote span{
+      color: $fb-red;
+    }
+
+    .quote-mark {
+      float: none;
+    }
+  }
+  
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: $fb-red;
+    }
+  }
+
+
+}

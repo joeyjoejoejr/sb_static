@@ -1,0 +1,66 @@
+.case_study_employus {
+  $employus_blue: #71c9c8;
+
+  .case-study-description {
+    .small {
+      margin-top: 1em;
+      font-size: 0.8em;
+      color: $md-grey;
+      a {
+        color: $md-grey;
+      }
+    }
+  }
+
+  .blur-img,
+  .blur-img > div {
+    min-height: 740px;
+    max-height: 740px;
+
+    .blur {
+      opacity: 0 !important;
+    }
+  }
+
+  .theme-block-1 {
+    background-color: #f0f0f0;
+
+    .button {
+      @include button($employus_blue, $white);
+    }
+  }
+
+  .quote span,
+  .quote-mark {
+    color: $employus_blue;
+  }
+
+  .theme-block-2 {
+    background: $white;
+    color: $dk-grey;
+
+    h5,
+    .author-ideas,
+    .quote span {
+      color: $dk-grey;
+    }
+
+    .author-ideas:hover {
+      color: #fe9f24;
+    }
+  }
+
+  .theme-block-3 {
+    background-color: $employus_blue;
+    color: $white;
+    h5 {
+      color: $white;
+    }
+  }
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: $employus_blue;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin transition($animation) {
+  transition: all .3s $animation;
+}
+
+@mixin rotation($degree) {
+  transform: rotate($degree);
+}
+
+%linear-trans {
+  @include transition(linear);
+}
+
+%ease-trans {
+  @include transition(ease);
+}
+
+%rot-45 {
+  @include rotation(-45deg);
+}
+
+%rot45 {
+  @include rotation(45deg);
+}

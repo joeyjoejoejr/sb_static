@@ -1,0 +1,45 @@
+.case_study_dognition {
+  .blur-img,
+  .blur-img > div {
+    min-height: 740px;
+    max-height: 740px;
+
+    .blur {
+      opacity: 0 !important;
+    }
+  }
+
+  .theme-block-1 {
+    background-color: #f0f0f0;
+
+    .button {
+      @include button(#ff3800, $white);
+    }
+  }
+
+  .quote span,
+  .quote-mark {
+    color: #ff3800;
+  }
+
+  .theme-block-2 {
+    background: $white;
+    color: $dk-grey;
+
+    h5,
+    .author-ideas,
+    .quote span {
+      color: $dk-grey;
+    }
+
+    .author-ideas:hover {
+      color: #fe9f24;
+    }
+  }
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: #fe9f24;
+    }
+  }
+}

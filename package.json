@@ -1,0 +1,13 @@
+{
+  "name": "sb-static",
+  "description": "SB.com Static Site",
+  "dependencies": {
+    "coffee-script": "1.9.x",
+    "jade": "1.9.x",
+    "marked": "0.3.x",
+    "node-sass": "^3.3.2",
+    "roots": "3.0.x",
+    "roots-contentful": "0.0.7",
+    "ship": "0.2.x"
+  }
+}

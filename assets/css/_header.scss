@@ -1,0 +1,34 @@
+.header {
+  padding: 0;
+  
+  .logo {
+    font-size: 1.25rem;
+    margin: .5rem 0 1.57rem 1rem;
+    color: $white;
+    display: block;
+    position: relative;
+    z-index: 2;
+    
+    i {
+      -moz-transition: none;
+      -webkit-transition: none;
+      -o-transition: color 0 ease-in;
+      transition: none;
+      position: relative;
+    }
+  }
+
+  span {
+    display: none;
+  }
+  
+  .icon-sb-mark {
+    font-size: 3.25rem;
+
+  }
+
+  .icon-sb-logo {
+    top: .75rem;
+    font-size: 1.25rem;
+  }
+}

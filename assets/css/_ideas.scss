@@ -1,0 +1,494 @@
+.ideas-header {
+  @extend %header-carousel;
+
+  .banner-carousel {
+    .post-details {
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      padding-top: 155px;
+      h1 {
+        font-size: 2.125rem;
+        position: relative;
+        font-weight: 600;
+
+        @media #{$small-up} {
+          font-size: 1.75rem;
+        }
+
+        @media #{$medium-up} {
+          font-size: 2rem;
+        }
+
+        @media #{$large-up} {
+          font-size: 2.5rem;
+        }
+
+        @media #{$xlarge-up} {
+          font-size: 3.75rem;
+        }
+      }
+    }
+
+    .blur.overlay {
+      @extend %overlay;
+      display: block;
+      opacity: 0;
+    }
+
+    .gradient.overlay {
+      @extend %overlay;
+      display: block;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    }
+  }
+
+}
+
+.ideas-quote {
+  padding: 1.25rem 0 0;
+}
+
+
+.ideas-posts {
+  position: relative;
+  padding: .875rem 0;
+
+  .row {
+    max-width: 71.75rem;
+  }
+
+  .button {
+    @include button($grey, $dk-grey);
+    margin: 0 .125rem;
+    padding: 30px;
+    border: 0;
+
+    &:hover {
+      border: 0;
+      background-color: $pink;
+      color: $white;
+    }
+
+    @media #{$medium-up} {
+      padding: 15px 30px;
+    }
+  }
+
+  .overlay {
+    @extend %overlay;
+    @extend %ease-trans;
+    padding: 0 1rem;
+    min-width: 300px;
+    min-height: 222px;
+    width: 300px;
+    height: 222px;
+    background: rgba(0, 0, 0, .7);
+
+    h5 {
+      @extend %vertical-align-text;
+
+      @media #{$small-only}{
+        text-align: center;
+        margin: 0 auto;
+        width: 280px;
+      }
+    }
+
+    a {
+      color: $white;
+    }
+
+    // Little text elements at the bottom of the idea index boxes
+    %bottomfeeders {
+      position: absolute;
+      font-size: .75rem;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    .see-more {
+      @extend %bottomfeeders;
+      bottom: 10%;
+      opacity: 0;
+    }
+
+    .date {
+      @extend %bottomfeeders;
+      color: $grey;
+      bottom: 10%;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, .9);
+      
+      .date {
+        opacity: 0;
+      }
+
+      .see-more {
+        opacity: 1;
+      }
+    }
+
+    @media #{$medium-up} {
+      min-width: 275px;
+      min-height: 205px;
+      width: 275px;
+      height: 205px;
+    }
+  }
+
+  .load-more-btn {
+    text-align: center;
+
+    .button {
+      width: 99%;
+    }
+  }
+}
+
+
+.ideas-nav,
+.ideas-nav-mobile {
+  margin: 0 auto 2rem;
+
+  .button.is-checked {
+    background-color: $pink;
+    color: $white;
+  }
+
+  .button-group:after {
+    display: block;
+    clear: both;
+    content: '';
+
+    .button {
+      float: left;
+      margin-right: 1px;
+      margin-left: 0;
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: .5em 0 0 .5em;
+      }
+
+      &:last-child {
+        border-radius: 0 .5em .5em 0;
+      }
+    }
+  }
+}
+
+.ideas-quote {
+  h5 {
+    color: $pink;
+    font-weight: 700;
+  }
+}
+
+.ideas-nav {
+  display: none;
+
+  .button-group .button {
+    display: inline-block;
+    width: 19.425%;
+  }
+
+  @media #{$large-up} {
+    display: block;
+  }
+}
+
+
+.ideas-nav-mobile {
+  display: block;
+  margin: 0 auto 2rem;
+  text-align: center;
+
+  .category {
+    .triangle-down {
+      position: relative;
+      right: 2rem;
+      float: right;
+      margin-top: 5px;
+
+      @media #{$medium-up} {
+        right: 12.5rem;
+      }
+    }
+
+    &:hover .triangle-down {
+      border-top: 8px solid $white;
+    }
+  }
+
+  .f-dropdown {
+    margin-top: 0;
+    width: 100% !important;
+    border: 0;
+    background: transparent;
+    font-size: inherit;
+
+    &.open {
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .button {
+    width: 79%;
+  }
+
+  @media #{$large-up} {
+    display: none;
+  }
+}
+
+
+.blog-posts ul .post {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 .125rem .125rem;
+  min-width: 300px;
+  min-height: 225px;
+  width: 300px;
+  height: auto;
+  list-style-type: none;
+  vertical-align: middle;
+
+  h5 {
+    text-transform: none;
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  @media #{$medium-up} {
+    min-width: 275px;
+    min-height: 205px;
+    width: 275px;
+    height: 205px;
+  }
+}
+
+
+.single-ideas-header {
+  @extend %header-bg;
+  padding: 0;
+
+  .main {
+    height: 492px;
+    vertical-align: bottom;
+
+    h3 {
+      position: absolute;
+      bottom: 80px;
+      line-height: 1.2;
+      font-size: 1.75rem;
+    }
+  }
+
+  .mugshot {
+    // Add absolute and sends to bottom
+    position: absolute;
+    bottom: 40px;
+    color: $white;
+    
+    img {
+      margin-right: .5rem;
+      border-radius: 50%;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span.date {
+      margin-left: 2rem;
+    }
+
+    .author-name {
+      margin-right: 3rem;
+
+      @media #{$small-only} {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+// for highlight.js
+.hljs {
+  overflow: auto;
+  margin-bottom: 1.6rem;
+  font-size: .75rem;
+}
+
+
+.single-ideas-post {
+  overflow: hidden;
+  padding: 0 0 12rem;
+
+  .tags {
+    float: left;
+    margin-bottom: 1rem;
+
+    a {
+      color: $md-grey;
+      font-style: italic;
+      font-size: .875rem;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  hr {
+    margin-bottom: 1rem;
+  }
+
+  .close span {
+    display: none;
+  }
+
+  /////////////////////////////////////
+  // For Wordpress blog import classes
+  /////////////////////////////////////
+
+  .gist table {
+    margin-bottom: 0;
+    border: 0;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: 2rem;
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: 2rem;
+  }
+
+  iframe.tweet-text {
+    margin: 10px auto;
+  }
+
+  video,
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /////////////////////////////////////
+
+  ul {
+    margin-left: 2rem;
+
+    li {
+      font-weight: 300;
+    }
+  }
+
+  .main img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .main a {
+    color: $pink;
+
+    &:hover {
+      color: $dk-grey;
+    }
+  }
+}
+
+
+.author-image {
+  position: relative;
+  top: -7rem;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+
+.nav,
+.social-share {
+  float: right;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+
+  a {
+    font-weight: 300;
+    font-size: .875rem;
+    cursor: pointer;
+    
+    &:hover {
+      color: $pink;
+    }
+  }
+}
+
+
+.nav {
+  list-style: none;
+}
+
+.social-share {
+  display: none;
+  margin: 0 auto .75rem;
+  width: auto;
+
+  .share a {
+    margin: 0 1rem;
+
+    @media #{$small-only} {
+      margin: 0 .425rem 0 0;
+    }
+  }
+
+  @media #{$small-only} {
+    margin-left: 0 !important;
+  }
+}
+
+.blog_post .ideas-other {
+  padding: 0 1rem 8.25rem;
+  
+  .row {
+    margin-top: -2rem;
+  }
+}
+
+// Make code blocks use same base color that hljs uses
+code{
+  color: #c5c8c6
+}

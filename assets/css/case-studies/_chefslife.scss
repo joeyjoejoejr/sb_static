@@ -1,0 +1,49 @@
+.case_study_chefslife {
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: #cc6c4e;
+    }
+  }
+
+  .theme-block-1,
+  .theme-block-3 {
+    background-color: #f0f0f0;
+
+    .button {
+      @include button(#cc6c43, $white);
+    }
+  }
+
+  .quote span,
+  .quote-mark {
+    color: #cc6c43;
+  }
+
+  .theme-block-3,
+  .theme-block-4 {
+    .quote-mark,
+    .author-ideas:hover {
+      color: #a83a26;
+    }
+  }
+
+  .theme-block-2 .author-ideas {
+    color: $dk-grey;
+
+    &:hover {
+      color: #a83a26;
+    }
+  }
+
+  .theme-block-4 {
+    background: #cc6c4e;
+    color: $white;
+
+    .quote span,
+    .author-ideas i,
+    .author-ideas {
+      color: $white;
+    }
+  }
+}

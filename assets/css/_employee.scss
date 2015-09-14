@@ -1,0 +1,38 @@
+.employee-overview {
+  @extend %header-bg;
+  height: 492px;
+  
+  .main {
+    text-align: center;
+    
+    .mugshot img {
+      border-radius: 50%;
+    }
+    
+    h3,
+    h6 {
+      color: $white;
+    }
+  }
+}
+
+.employee-select {
+  overflow: hidden;
+  padding: 0;
+
+  .close span {
+    display: none;
+  }
+  
+  .main a {
+    color: $pink;
+    
+    &:hover {
+      color: $dk-grey;
+    }
+  }
+}
+
+.employee-bio {
+  padding: 0 0 5rem;
+}

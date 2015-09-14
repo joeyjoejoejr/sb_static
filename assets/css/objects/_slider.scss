@@ -1,0 +1,215 @@
+%owl-dot {
+  display: inline-block;
+  margin-right: 5px;
+
+  span {
+    display: inline-block;
+    background: none;
+    border: 1px solid $white;
+    opacity: .8;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  &.active,
+  &:hover {
+    span {
+      background: $white;
+    }
+  }
+}
+
+%header-carousel {
+  min-height: $header-bg-height;
+  padding-left: 0;
+
+  .banner-carousel {
+    position: absolute;
+    top: 0;
+
+    .owl-dots {
+      position: absolute;
+      bottom: 10px;
+      height: 20px;
+      width: 100%;
+      text-align: center;
+
+      .owl-dot {
+        @extend %owl-dot;
+      }
+    }
+
+    // These are the individual slides that show up in the carousel.  It's
+    // probably best if you set background-image to the slide image, and
+    // use the classes nested here to style any text in there.
+    .item {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      height: $header-bg-height;
+
+      p.byline {
+        color: $white;
+        font-size: 1.4em;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      // This view more button style can be used for putting buttons in
+      // carousels to link to the main content described by the carousel slide
+      .view-more.button {
+        position: absolute;
+        bottom: 65px;
+        margin-left: auto;
+        margin-right: auto;
+        right: auto;
+        left: auto;
+
+        // This is a little janky.  Centering an absolutely positioned element
+        // doesn't take into account its calculated width, so its putting its left
+        // edge where its center aught to be.  This just moves it back over by half
+        // its width.
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.carousel {
+  background: $white;
+  position: relative;
+  overflow: hidden;
+
+  img[alt="plain"].background,
+  img[alt="Plain"].background {
+    width: auto;
+  }
+  
+  .owl-height {
+    height: 100% !important;
+  }
+
+  .slide-image-wrapper {
+    overflow: hidden;
+
+    .background {
+      max-width: none;
+      width: auto;
+      height: 350px;
+
+      @media #{$medium-up} {
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) and (min-width: 475px) {
+      .background {
+        margin: auto;
+      }
+    }
+
+    @media #{$medium-up} {
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .slide {
+    position: relative;
+  }
+
+  .slide-pink .slide-container {
+    background: $pink;
+    height: 100%;
+  }
+
+  .slide-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    .title {
+      margin-bottom: 1.5rem;
+      color: #e6e7eb;
+    }
+
+    p {
+      margin-top: 2rem;
+      padding: 0 1.375rem;
+      display: block;
+      width: 100%;
+      width: 100vw;
+      font-weight: 300;
+      font-size: .85em;
+      color: $white;
+
+      @media #{$medium-up} {
+        font-size: 1.25rem;
+        width: auto;
+      }
+    }
+  }
+
+  .owl-dots {
+    position: relative;
+    bottom: 40px;
+    text-align: center;
+
+    @media #{$medium-up} {
+      display: block;
+    }
+  }
+
+  .owl-controls {
+    height: 0;
+  }
+
+  .owl-dot {
+    @extend %owl-dot;
+  }
+
+  .owl-nav {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    top: 40%;
+    display: none;
+
+    @media #{$medium-up} {
+      display: block;
+    }
+  }
+
+  .owl-prev,
+  .owl-next {
+    @extend %ease-trans;
+    height: 81px;
+    width: 81px;
+    font-size: 5em;
+    border-radius: none;
+    background: transparent;
+    opacity: .5;
+    margin: 0 1rem;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .owl-prev {
+    float: left;
+  }
+
+  .owl-next {
+    float: right;
+  }
+}

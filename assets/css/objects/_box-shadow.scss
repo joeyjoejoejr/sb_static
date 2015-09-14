@@ -1,0 +1,26 @@
+%box-shadow {
+  box-shadow: 0 0 20px 0 rgba(50, 50, 50, .1);
+}
+
+%info-block-container {
+  margin: 2% auto;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+%info-block {
+  @extend %box-shadow;
+  display: inline-block;
+  margin: 1.5rem auto;
+  padding: 5% 5% 3%;
+  zoom: 1;
+  *display: inline;
+  
+  @media #{$large-up} {
+    &:first-child,
+    &:last-child {
+      margin: 0 0 auto .5rem;
+    }
+  }
+}

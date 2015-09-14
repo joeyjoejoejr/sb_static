@@ -1,0 +1,101 @@
+.events-header {
+  @extend %header-bg;
+  
+  @media #{$small-only} {
+    padding: 0;
+  } 
+}
+
+.events-content {
+  .upcoming-events {
+    .btn {
+      @extend %btn-pink;
+      margin: 0 auto 3%;
+      padding: 5px 0 3px;
+      width: 100%;
+      text-align: center;
+      cursor: default;
+      &:hover {
+        background-color: $pink;
+        a {
+          color: $white;
+        }
+      }
+    }
+    .event-block {
+      @extend %ease-trans;
+      padding: 0.5rem;
+      h6 {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      h6, p {
+        width: 90%;
+      }
+      a {
+        color: $pink;
+      }
+      p, a {
+        font-size: .875rem;
+      }
+      &:hover {
+        background-color: #fde7f0;
+      }
+      &:last-child {
+        margin-bottom: 5%;
+      }
+    }
+  }
+  .post {
+    clear: both;
+    .featured {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1.875rem;
+      width: 100%;
+      height: auto;
+      img {
+        display: block;
+        width: 100%;
+      }
+      .overlay {
+        @extend %overlay;
+        width: 742px;
+        height: 402px;
+        background: rgba(0, 0, 0, 0);
+        div {
+          @extend %vertical-align-text;
+          h5 {
+            color: $white;
+          }
+        }
+        @media #{$medium-only} {
+          width: 706px;
+          height: 383px;
+        }
+        @media #{$small-only} {
+          width: 454px;
+          height: 246px;
+        }
+      }
+    }
+    .content-info {
+      padding: 0 .975rem 3.5rem 0;
+      p {
+        font-size: .875rem;
+      }
+    }
+    .content-date {
+      margin-bottom: 1.875rem;
+      h6 {
+        font-weight: 700;
+      }
+      a {
+        color: $pink;
+      }
+      p, a {
+        font-size: .875rem;
+      }
+    }
+  }
+}

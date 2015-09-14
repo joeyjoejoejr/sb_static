@@ -1,0 +1,48 @@
+.section{
+  padding: 3.75rem 1rem;
+  &:nth-child(even) {background: #f0f0f0}
+  h5{  
+    margin-bottom: 2.75rem;
+    color: #4d4d4f;
+  }
+  blockquote {
+    border-left: none;
+    padding: 0 1.5em 0 2.5em;
+    position:relative;
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+  blockquote:before
+   {
+    font-family: 'Smashing-Boxes';
+    color: #ccc;
+    content: "\e608";
+    font-size: 5em;
+    position:absolute;
+    left:5px;
+    top: 0.3em;
+    line-height: 0.1em;
+    font-size: 2rem;
+  }
+
+  blockquote:after
+   {
+    font-family: 'Smashing-Boxes';
+    color: #ccc;
+    content: "\e601";
+    font-size: 5em;
+    position:absolute;
+    right:5px;
+    bottom: 0em;
+    line-height: 0.1em;
+    font-size: 2rem;
+  }
+}
+.themed-block, .theme-block-1 .button{
+  color: #FFF;
+  h5 {
+    color: #FFF;
+  }
+}
+
+

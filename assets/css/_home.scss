@@ -1,0 +1,318 @@
+.home-header {
+  @extend %header-carousel;
+
+  .blur-img {
+    > div {
+      background-position: top;
+    }
+
+    .blur {
+      background-color: $pink !important;
+    }
+  }
+
+  .banner-carousel {
+    .item {
+      .project-description {
+        h1 {
+          font-size: 5em;
+          line-height: 1.1em;
+          font-weight: 700;
+          letter-spacing: 0.075em;
+
+          @media #{$small-only} {
+            font-size: 3rem;
+          }
+        }
+
+
+        padding-top: 185px;
+        // On narrow screens, the header and byline text stacks up causing
+        // the .content div to grow and flow beyond the header height.  Moving
+        // things closer to the top when the screen is narrow allows for 2 lines
+        // of title text and 4-5 lines byline text
+        //
+        // This can probably be reduced to 50px if things are still overflowing
+        // due to long titles or bylines.
+        @media #{$small-only} {
+          padding-top: 100px;
+        }
+
+        text-align: center;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-bottom: 2rem;
+
+        a.button {
+          margin-top: 1.75rem;
+        }
+      }
+    }
+  }
+
+  .main {
+    padding: 3rem 1rem 0;
+    text-align: center;
+
+    h1 {
+      letter-spacing: .04em;
+      font-size: 1.25em;
+      line-height: 31.5px;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    h5 {
+      letter-spacing: .06em;
+      font-size: 3em;
+      font-weight: 800;
+      line-height: 4.063rem;
+      
+      @media #{$medium-up} {
+        font-size: 3.75rem;
+      }
+    }
+
+    .logo-alt {
+      margin: 2% auto;
+    }
+
+    @media #{$medium-up} {
+      padding: 3rem 0;
+    }
+  }
+}
+
+
+.services {
+  padding: 3.25rem 0;
+
+  .main {
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .hr {
+    @extend %horiz-rule;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+  }
+
+  h1 {
+    margin: 0 auto;
+    font-size: 4.5rem;
+    line-height: 4.4rem;
+
+    @media #{$medium-up} {
+      line-height: 5.4rem;
+      font-size: 4.9rem;
+      display: inline-block;
+    }
+
+    @media #{$large-up} {
+      font-size: 5.4rem;
+    }
+  }
+
+  .fade1,
+  .fade3,
+  .fade5 {
+    color: $md-grey;
+    opacity: 1;
+
+    @media #{$medium-up} {
+      opacity: 0;
+    }
+  }
+
+  .fade2,
+  .fade4 {
+    color: $pink;
+  }
+
+  .fade2 {
+    margin-left: 0;
+
+    @media #{$medium-up} {
+      margin-left: -4.5rem;
+    }
+
+    @media #{$large-up} {
+      margin-left: -7.5rem;
+    }
+  }
+
+  .fade3 {
+    margin-left: .125rem;
+  }
+
+  .fade4 {
+    @media #{$medium-up} {
+      margin-left: -7.8rem;
+    }
+
+    @media #{$large-up} {
+      margin-left: -8.8rem;
+    }
+  }
+
+  .service-list {
+    margin-top: 3.25%;
+
+    @media #{$medium-up} {
+      padding-left: 0;
+    }
+  }
+
+  p {
+    @media #{$large-up} {
+      margin-top: 12%;
+    }
+  }
+
+  .list-border {
+    width: 50%;
+    display: inline-block;
+    padding-left: 1.5rem;
+    vertical-align: top;
+
+    &:before {
+      position: relative;
+      top: -32px;
+      padding-bottom: .625rem;
+      border-left: 1px dashed $grey;
+      content: ' ';
+      display: none;
+      
+      @media #{$medium-up} {
+        display: block;
+      }
+    }
+
+    span {
+      color: #231f20;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: .875rem;
+    }
+
+    @media #{$medium-up} {
+      width: 33.33%;
+      padding: 0 2rem;
+    }
+  }
+
+  ul {
+    margin: 1.5rem auto;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      color: #231f20;
+      font-size: .875rem;
+    }
+  }
+}
+
+#home-carousel {
+  text-align: center;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+  }
+
+  .title {
+    color: $white;
+  }
+
+  .slide {
+    height: $header-bg-height;
+    img {
+      min-height: $header-bg-height;
+    }
+  }
+
+  .academy-logo {
+    top: 2.25rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    padding-bottom: 4rem;
+    position: relative;
+    width: 350px;
+    height: auto;
+    
+    @media #{$medium-up} {
+      padding-bottom: 0;
+      margin-bottom: 4.5rem;
+      width: 100%;
+      max-height: 820px;
+    }
+
+    @media #{$xlarge-up} {
+      top: 4.25rem;
+      margin-bottom: 6.5rem;
+    }
+  }
+
+  @media #{$medium-only} {
+    .owl-buttons {
+      display: none;
+    }
+  }
+
+  p {
+    display: none;
+
+    @media #{$large-up} {
+      display: block;
+    }
+  }
+
+  .blog-title {
+    color: $white;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 25px;
+    margin: 15% auto 5%;
+
+    @media #{$medium-up} {
+      margin: 5% auto 2%;
+      font-size: 35px;
+    }
+
+    @media #{$large-up} {
+      margin: 18% auto 5%;
+    }
+
+    @media #{$xlarge-up} {
+      margin: 25% auto 5%;
+    }
+  }
+
+  .button {
+    @include button($white, $dk-grey);
+    font-size: inherit;
+    padding: 5px 20px;
+
+    @media #{$medium-up} {
+      margin-bottom: 6.5rem;
+      padding: 15px 40px;
+    }
+  }
+
+  .owl-prev, .owl-next {
+    color: $pink;
+  }
+}

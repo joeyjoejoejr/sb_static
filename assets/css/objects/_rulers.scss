@@ -1,0 +1,15 @@
+%border-rule {
+  background-color: $white;
+  color: $white;
+  height: 1px;
+}
+
+%horiz-rule {
+  @extend %border-rule;
+  border-top: 1px dashed #e7e8e8;
+}
+
+%vert-rule {
+  @extend %border-rule;
+  border-left: 1px dashed #e7e8e8;
+}

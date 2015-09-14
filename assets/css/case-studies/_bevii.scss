@@ -1,0 +1,75 @@
+.case_study_bevii {
+  .blur-img,
+  .blur-img > div {
+    min-height: 740px;
+    max-height: 740px;
+
+    .blur {
+      opacity: 0 !important;
+    }
+  }
+
+  .theme-block-2 {
+    .author-ideas:hover,
+    span {
+      color: #fe9f24;
+    }
+  }
+
+  .quote span,
+  .quote-mark {
+    color: #fe9f24;
+  }
+
+  .carousel {
+    .owl-prev, .owl-next {
+      color: #fe9f24;
+    }
+  }
+
+  .theme-block-1,
+  .theme-block-3,
+  .theme-block-5 {
+    color: $white;
+  }
+
+  .theme-block-1,
+  .theme-block-3 {
+    background: #fe9f24;
+  }
+
+  .theme-block-2,
+  .theme-block-3 {
+    .quote-mark:nth-of-type(2) {
+      line-height: 1;
+      float: right;
+    }
+  }
+
+  .theme-block-3 {
+    .quote-mark,
+    .author-ideas:hover {
+      color: #ed6723;
+    }
+
+    h5,
+    .author-ideas,
+    .quote span {
+      color: $white;
+    }
+  }
+
+  .theme-block-5 {
+    background: #ed6723;
+
+    .author-ideas,
+    .author-ideas i,
+    .quote span {
+      color: $white;
+    }
+
+    .author-ideas:hover {
+      color: #fe9f24;
+    }
+  }
+}

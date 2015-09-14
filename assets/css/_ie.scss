@@ -1,0 +1,170 @@
+%text3die {
+  display: inline-block;
+  overflow: hidden;
+  color: $white;
+  vertical-align: top;
+  
+  &:hover span {
+    background: $white;
+    color: $pink;
+    transform: none;
+  }
+
+  > span {
+    @extend %linear-trans;
+    position: relative;
+    display: block;
+    padding: 0 6px;
+    transform-origin: none;
+    transform-style: none;
+  }
+}
+
+
+html[data-useragent*='MSIE 9.0'] {
+  
+  .fade1,
+  .fade3,
+  .fade5 {
+    opacity: 1;
+  }
+  
+  .our-work .button:hover,
+  .hiring .button:hover {
+    color: $dk-grey;
+  }
+  
+  .listing-accordion .button:hover {
+    color: $white;
+  }
+  
+  footer .button:hover {
+    color: $pink;
+  }
+  
+  .side > .dr-menu > ul > li > a {
+    @extend %text3d;
+    color: none;
+    
+    &:hover {
+      @extend %linear-trans;
+      background: $white;
+      
+      span {
+        @extend %linear-trans;
+        background: transparent;
+        color: none;
+        
+        &::after {
+          color: $pink;
+        }
+      }
+    }
+    
+    > span &::after {
+      background: transparent;
+      color: $white;
+    }
+  }
+}
+
+
+html[data-useragent*='MSIE 10.0'],
+html[data-useragent*='rv:11.0'] {
+
+  .side > .dr-menu > ul > li > a {
+    @extend %text3die;
+  }
+}
+
+
+html[data-useragent*='iPhone'] {
+
+  .side.pink-box {
+    width: 92%;
+  }
+
+  .side .dr-menu ul li a {
+    font-size: 1rem;
+  }
+  
+  .employee-select .next-prev ul li a {
+    font-size: .675rem;
+    
+    .image-prev,
+    .image-next {
+      top: .5rem;
+    }
+  }
+
+  .blur {
+    display: none;
+  }
+
+  .list-border span {
+    font-size: .625rem;
+  }
+
+  @media #{$small-only} {
+    .personnel .office-container {
+      min-height: 330px;
+    }
+  }
+
+  .listing-arrow {
+    display: none;
+  }
+
+  ul li {
+    font-size: .75rem;
+  }
+
+  .people ul li:hover .overlay {
+    opacity: 0;
+  }
+
+  footer input {
+    border-radius: 0;
+    top: .175rem;
+  }
+
+  .newsletter form .button {
+    top: .015rem;
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation:landscape) {
+    .side.pink-box {
+      width: 94.5%;
+    }
+    
+    .projects-header .projects {
+      .logo,
+      .overlay {
+        width: 100%;
+        height: 460px;
+      }
+
+      .logo {
+        left: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:landscape) {
+    .side.pink-box {
+      width: 96%;
+    }
+
+    .projects-header .projects {
+      .logo,
+      .overlay {
+        width: 85.6%;
+        height: 460px;
+      }
+
+      .logo {
+        left: 38px;
+      }
+    }
+  }
+}

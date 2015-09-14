@@ -1,0 +1,136 @@
+%text3d {
+  display: inline-block;
+  overflow: hidden;
+  color: $white;
+  vertical-align: top;
+
+  &:hover span {
+    transform: translate3d(0, 0, -30px) rotateX(90deg);
+  }
+
+  > span {
+    @extend %linear-trans;
+    position: relative;
+    display: block;
+    padding: 0 6px;
+    transform-origin: 50% 0%;
+    transform-style: preserve-3d;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      padding: 0 5px 2px;
+      background: $white;
+      color: $pink;
+      content: attr(data-title);
+      transform: translate3d(0, 105%, 0) rotateX(-90deg);
+      transform-origin: 50% 0%;
+    }
+  }
+}
+
+
+%next-prev,
+.next-prev {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+
+  > ul:first-of-type {
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    list-style: none;
+
+    > li {
+      display: inline-block;
+      float: none;
+      margin: 0;
+      width: 43%;
+      list-style: none;
+
+      &:nth-child(1) {
+        padding: .5rem 0 1.125rem;
+        border-right: 1px solid #e6e7e8;
+        
+        @media #{$small-only} {
+          padding: 0 0 .5rem;
+        }
+      }
+
+      &:nth-child(3) {
+        padding: .5rem 0 1.125rem;
+        border-left: 1px solid #e6e7e8;
+        @media #{$small-only} {
+          padding: 0 0 .5rem;
+        }
+      }
+
+      span,
+      a {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1rem;
+      }
+
+      a:hover {
+        color: $pink;
+      }
+
+      span {
+        color: $md-grey;
+        text-decoration: line-through;
+      }
+
+      @media #{$medium-up} {
+        width: 33%;
+      }
+    }
+  }
+
+  .image-prev,
+  .image-close,
+  .image-next {
+    position: relative;
+    top: .325rem;
+    display: inline-block;
+    padding: 0 2.5% 2.5%;
+    color: $md-grey;
+    font-size: 1.5rem;
+
+    &.disabled {
+      color: $md-grey;
+    }
+
+    &:hover {
+      color: $pink;
+    }
+
+    @media #{$medium-up} {
+      top: .625rem;
+      font-size: 2rem;
+    }
+  }
+
+  .image-close {
+    top: .325rem;
+    
+    @media #{$small-only} {
+      top: .25rem;
+    }
+  }
+
+  .prev {
+    margin-right: .25rem;
+  }
+
+  .next {
+    margin-left: .25rem;
+  }
+
+  .close {
+    width: 13% !important;
+  }
+}

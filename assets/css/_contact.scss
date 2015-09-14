@@ -1,0 +1,203 @@
+body.contact .contact-btn {
+  display: none;
+}
+
+.contact-header {
+  @extend %header-bg;
+
+  .main h1 {
+    font-size: 2.125rem;
+
+    @media #{$medium-up} {
+      font-size: 2.5rem;
+    }
+
+    @media #{$large-up} {
+      font-size: 3.25rem;
+    }
+    
+    @media #{$xlarge-up} {
+      font-size: 3.75rem;
+    }
+  }
+
+  .blur {
+    background-color: $pink !important;
+  }
+}
+
+
+.personnel {
+  @extend %info-block-container;
+  margin: 0 auto;
+  padding: 3.625rem 1rem;
+  
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+.office-container,
+.contact-container {
+  @extend %info-block;
+  min-height: 375px;
+
+  h5,
+  h6 {
+    color: $dk-grey;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .headline {
+    @extend %vertical-align-container;
+    margin: 0 auto 1.9rem;
+    height: 70px;
+    
+    > div {
+      @extend %vertical-align-text;
+    }
+  }
+  
+  .name {
+    margin: 0 auto .375rem;
+    min-height: 1.563rem;
+  }
+  
+  .title {
+    white-space: nowrap;
+    text-transform: none;
+  }
+  
+  hr {
+    margin: 1.25rem auto 1.1875rem;
+    width: 20%;
+  }
+
+  a,
+  li {
+    font-size: .875rem;
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  a {
+    color: $pink;
+    
+    &:hover {
+      color: $dk-grey;
+    }
+  }
+}
+
+.office-container {
+  padding: 1%;
+  margin: 0 auto 2rem;
+
+  li {
+    list-style: none;
+  }
+
+  .logo-alt {
+    color: $pink;
+    font-size: 1.75rem;
+  }
+
+  .headline {
+    width: 250px;
+    
+    > div h5 {
+      margin-top: 1rem;
+      font-weight: 300;
+      font-size: 1.25rem;
+    }
+  }
+
+  @media #{$medium-up} {
+    margin: 0 auto 2rem .5rem;
+  }
+}
+
+.office-hq {
+  width: auto;
+  margin: 1rem auto;
+  
+  .logo-alt {
+    position: relative;
+    top: 5.5rem;
+  }
+
+  .headline {
+    margin-top: 5.5rem;
+  }
+
+  @media #{$large-up} {
+    width: 940px;
+  }
+}
+
+.office-other {
+  width: 100%;
+  padding: 5% 1% 1%;
+  margin: 1rem auto;
+
+  @media #{$small-only} {
+    float: none;
+  }
+
+  @media #{$medium-up} {
+    width: 442px;
+  }
+
+  @media #{$medium-only} {
+    float: none;
+  }
+
+  @media #{$xlarge-up} {
+    width: 452px;
+  }
+}
+
+.office-container-other {
+  padding: 0;
+}
+
+.contact-container {
+  margin: 1rem 1.75rem 1.75rem;
+  width: 280px;
+  padding: 5% 3% 3%;
+
+  .headline {
+    width: 200px;
+    
+    > div h6 {
+      font-size: .875rem;
+    }
+  }
+
+  i {
+    font-size: 5rem;
+    color: #231f20;
+    border-radius: 50%;
+    background-color: $grey;
+  }
+
+  &:last-child,
+  &:first-child {
+    margin: 1rem 1.5rem 1.75rem;
+    
+    @media #{$small-only} {
+      margin: 1rem auto;
+    }
+  }
+
+  @media #{$small-only} {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 315px;
+  }
+}
