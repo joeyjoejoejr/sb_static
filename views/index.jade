@@ -1,10 +1,123 @@
 extends layout
 
 block content
-  h3 Welcome to roots!
-  :markdown
-    Find tutorials and documentation at http://roots.cx : )
+  section.section-pink.home-header
+    div.banner-carousel.owl-carousel.owl-theme
+      // - @featured_case_studies.each do |case_study|
 
+      //   // We don't want to go trying to render case studies without header
+      //   // backgrounds set, as they'll 500 or just have a blank box up top
+
+      //   - next unless case_study.background.present?
+      //   div class="item" style="background-image: url('#{case_study.background.url}');"
+      //     .project-description
+      //       h1=case_study.title
+      //       p.byline=case_study.description
+      //       a.view-more.button href="#{case_study.url}" View Project
+
+  section.section-white.services
+    .row.main
+      .columns.intro
+        h1.fade1 We
+        h1.fade2 Smash
+        h1
+          span.fade3 Th
+          span.fade4 ing
+          span.fade5 s
+      p.centered Whatever you imagine, we bring to life an amplified version of it.
+    .hr
+    .row
+      .large-13.columns.service-list.small-centered
+        .list-border
+          span Web
+          ul
+            li Ruby on Rails
+            li JavaScript
+            li Node.js
+            li AngularJS
+            li API Development
+        .list-border
+          span Mobile
+          ul
+            li API Integrations
+            li Responsive Design
+            li iOS
+            li Android
+            li PhoneGap
+        .list-border
+          span Experience Design
+          ul
+            li Information Architecture
+            li Prototyping
+            li Wireframing
+            li Interface Design
+            li User Research
+        .list-border
+          span Strategy
+          ul
+            li Market Analysis
+            li Brand Workshops
+            li Phase Planning
+            li Launch Strategy
+            li Product Management
+        .list-border
+          span Growth Engineering
+          ul
+            li KPI Discovery
+            li Web & Mobile Analytics
+            li Testing/Optimization
+            li SEO/SEM
+            li Social Listening
+        .list-border
+          span Branding
+          ul
+            li Brand Identity
+            li Logo Design
+            li Art Direction
+            li Photography
+
+  section
+    #home-carousel.carousel.js-slider
+      // - @featured_blog_posts.each_with_index do |post, i|
+      //   - next unless post.image.present?
+      //   .slide
+      //     .slide-image-wrapper
+      //       .overlay
+      //       - if i == 0
+      //         = dragonfly_image_tag(post.image, class: 'background')
+      //       - else
+      //         img data-src=post.image.url class="owl-lazy background" 
+      //     .slide-container
+      //       .large-7.small-16.columns.small-centered
+      //         h2.blog-title = post.title
+      //         = link_to idea_path(post), class: 'button blog-button' do
+      //           | See Our Latest Idea
+
+  section.section-white.social
+    .row.columns.small-centered
+      // - if @shots.present?
+      //   #dribbble-container
+      //     .content-header.centered
+      //       h5 Dribbble
+      //     hr
+      //     .post
+      //       ul.large-block-grid-3.medium-block-grid-2.small-block-grid-1
+      //         - @shots.each do |shot|
+      //           li.item
+      //             a href=shot[:url] target="_blank"
+      //               = image_tag shot[:image]
+
+      // - if @instagram_media.present?
+      //   #instagram-container
+      //     .content-header.centered
+      //       h5 Instagram
+      //     hr
+      //     .post
+      //       ul.large-block-grid-4.medium-block-grid-2.small-block-grid-1
+      //         - @instagram_media.each do |media|
+      //           li.item
+      //             a href=media[:url] target="_blank"
+      //               = image_tag media[:image]
   // Once you've added a content type and posts into Contentful
   // go update your app.coffee config and then test out iterating
   // over your content type here!
