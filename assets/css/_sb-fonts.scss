@@ -2,8 +2,9 @@
   font-weight: normal;
   font-style: normal;
   font-family: 'Smashing-Boxes';
-  src: font-url('Smashing-Boxes.eot');
-  src: url(font-path('Smashing-Boxes.eot') + '?#iefix') format('embedded-opentype'), font-url('Smashing-Boxes.woff') format('woff'), font-url('Smashing-Boxes.ttf') format('truetype'), url(font-path('Smashing-Boxes.svg') + '?#Smashing-Boxes') format('svg');
+  src: url('/fonts/Smashing-Boxes.eot') format("eot"),
+       url('/fonts/Smashing-Boxes.ttf') format("truetype"),
+       url('/fonts/Smashing-Boxes.svg#Samplino') format("svg");
 }
 
 [class^='icon-'],

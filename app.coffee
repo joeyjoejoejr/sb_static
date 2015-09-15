@@ -1,11 +1,12 @@
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
+browserify   = require 'roots-browserify'
 
 module.exports =
   ignores: [
     'readme.md', '**/layout.*', '**/_*', '.gitignore', 'contentful.coffee',
-    'Makefile', 'ship*', '**/foundation/*',
+    'Makefile', 'ship*',
   ]
 
   scss:
@@ -14,4 +15,7 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config)]
+  extensions: [
+    contentful(config)
+    browserify(files: 'assets/js/application.coffee', out: 'js/build.js')
+  ]

@@ -1,34 +1,30 @@
-# //= require jquery
-# //= require jquery.easing
-# //= require foundation/foundation
-# //= require foundation/foundation.clearing
-# //= require foundation/foundation.reveal
-# //= require foundation/foundation.dropdown
-# //= require vendor/modernizr
-# //= require purl
-# //= require waypoints
-# //= require accordion
-# //= require home
-# //= require menu
-# //= require blog_posts
-# //= require employee
-# //= require jobs
-# //= require work
-# //= require turbolinks
-# //= require google_analytics
-# //= require crazyegg
-# //= require owl.carousel
-# //= require sliders
-# //= require froogaloop.min
-# //= require vimeo_track
+window.jQuery = window.$ = require "jquery"
+require "jquery.easing"
+require "../../node_modules/foundation-sites/js/foundation/foundation"
+require "../../node_modules/foundation-sites/js/foundation/foundation.clearing"
+require "../../node_modules/foundation-sites/js/foundation/foundation.reveal"
+require "../../node_modules/foundation-sites/js/foundation/foundation.dropdown"
+require "./vendor/purl"
+require "../../node_modules/waypoints/lib/jquery.waypoints"
+require "./vendor/accordion"
+require "./home"
+require "./menu"
+require "./blog_posts"
+require "./employee"
+require "./jobs"
+require "./work"
+require "./vendor/google_analytics"
+require "./vendor/crazyegg"
+require "./vendor/owl.carousel"
+require "./sliders"
+require "./vendor/froogaloop.min"
+require "./vendor/vimeo_track"
 
 $(document).on "click", ".pagination a[data-remote=true]", (e) ->
   history.pushState {}, "", $(this).attr("href")
 
 $(window).on "popstate", ->
   $.get document.location.href
-
-Turbolinks.enableTransitionCache()
 
 $(window).scroll ->
   if navigator.platform != 'iPad' || navigator.platform != 'iPhone' || navigator.platform != 'iPod'

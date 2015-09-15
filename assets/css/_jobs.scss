@@ -244,7 +244,7 @@
         display: inline-block;
         width: 22px;
         height: 12px;
-        content: image-url('jobs/down.png');
+        content: url('/img/jobs/down.png');
         opacity: 0;
         transition: rotateX  .3s linear;
       }
