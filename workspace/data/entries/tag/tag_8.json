@@ -1,0 +1,28 @@
+{
+  "id": "tag_8",
+  "Name": "Design",
+  "Slug": "design",
+  "database_id": 8,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_377"
+    },
+    {
+      "type": "post",
+      "id": "post_381"
+    },
+    {
+      "type": "post",
+      "id": "post_317"
+    },
+    {
+      "type": "post",
+      "id": "post_385"
+    },
+    {
+      "type": "post",
+      "id": "post_387"
+    }
+  ]
+}

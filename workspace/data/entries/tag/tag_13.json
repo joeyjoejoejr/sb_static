@@ -1,0 +1,28 @@
+{
+  "id": "tag_13",
+  "Name": "User Experience",
+  "Slug": "user-experience",
+  "database_id": 13,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_362"
+    },
+    {
+      "type": "post",
+      "id": "post_368"
+    },
+    {
+      "type": "post",
+      "id": "post_375"
+    },
+    {
+      "type": "post",
+      "id": "post_385"
+    },
+    {
+      "type": "post",
+      "id": "post_388"
+    }
+  ]
+}

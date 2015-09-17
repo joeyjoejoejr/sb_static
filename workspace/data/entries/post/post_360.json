@@ -1,0 +1,29 @@
+{
+  "id": "post_360",
+  "Title": "How To Use SnackbarJS with Rails",
+  "Summary": "SnackbarJS is a fun jquery plugin for showing alerts on the site. This article tells you how to get it to play nice with Turbolinks and Rails. ",
+  "Body": "<p>\r\n\t<a href=\"http://fezvrasta.github.io/snackbarjs/\">SnackbarJS</a> is a fun jQuery plugin for showing alerts on the site. Here's how you can get it to play nice with Turbolinks and Rails.</p><p>\r\n\tFirst thing we'll want to do is add the css and js files.</p><p>\r\n\tCopy&nbsp;\r\n\t<a href=\"https://github.com/FezVrasta/snackbarjs/blob/master/src/snackbar.js\" style=\"background-color: initial;\">snackbar.js</a>,&nbsp;<a href=\"https://github.com/FezVrasta/snackbarjs/blob/master/src/snackbar.css\" style=\"background-color: initial;\">snackbar.css</a> (and&nbsp;<a href=\"https://github.com/FezVrasta/snackbarjs/blob/master/themes-css/material.css\" style=\"background-color: initial;\">material.css</a> )&nbsp;in your /vendors/snackbarjs folder</p>\r\n<pre># application.css.scss\r\n@import \"snackbar\";\r\n</pre><pre>// application.js\r\n//= require snackbar\r\n</pre><p>\r\n\tNext we'll want to get our ruby flash available to our JS. There are many ways to do this. A&nbsp;simple solution is to include a data attribute.&nbsp;</p>\r\n<pre>&lt;body data-flash=\"&lt;%= flash.to_hash.to_json %&gt;\" &gt;\r\n</pre><p>\r\n\tFinally, let's add the JS to make the magic happen. Note that this function will also be triggered by Turbolink's page:load hook.</p>\r\n<pre>$(document).on('ready page:load', function(){\r\n  var flash = $(\"body\").data(\"flash\");\r\n  $.each( flash, function(key, value){\r\n    $.snackbar({content: value, style: key, timeout: 10000});\r\n  });\r\n});\r\n</pre>And now add the missing styles\r\n<pre>.snackbar.error {\r\n  background-color: red;\r\n}\r\n.snackbar.alert {\r\n  background-color: yellow;\r\n  color: black;\r\n}\r\n.snackbar.notice {\r\n  background-color: green;\r\n}\r\n</pre><p>\r\n\tDone!&nbsp;Want to see more like this? We dabble on \r\n\t<a href=\"https://github.com/smashingboxes\" style=\"font-size: 14px; background-color: initial;\">GitHub</a>.</p>",
+  "Slug": "use-snackbarjs-with-rails",
+  "slug_history": "---\n- using-snackbarjs-with-rails\n",
+  "visits": 108,
+  "Published": null,
+  "Authorname": "Michael Elfassy",
+  "category_id": 1,
+  "image_uid": "2014/11/20/16/46/59/395/file",
+  "created_at": "2014-11-20T21:21:40+00:00",
+  "updated_at": "2014-11-25T19:21:26+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 360,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  },
+  "tags": [
+    {
+      "type": "tag",
+      "id": "tag_2"
+    }
+  ]
+}

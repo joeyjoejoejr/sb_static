@@ -1,0 +1,29 @@
+{
+  "id": "post_297",
+  "Title": "Hierarchical Navigation with ExpressionEngine and Taxonomy",
+  "Summary": "Working with an unfamiliar tool-set usually poses some distinct challenges. Invaluable learning takes place when you have to use that tool-set to solve a complex problem. For me, the unfamiliar tool-set was ExpressionEngine and the complex problem was how best to use EE to build the NCSU College of Design website. ",
+  "Body": "<p>\r\n\tWorking with an unfamiliar tool-set usually poses some distinct challenges. Invaluable learning takes place when you have to use that tool-set to solve a complex problem. For me, the unfamiliar tool-set was \r\n\t<a href=\"http://ellislab.com/expressionengine\">ExpressionEngine</a> and the complex problem was how best to use EE to build the <a href=\"http://design.ncsu.edu/\">NCSU College of Design</a> website.</p><p>\r\n\tComing from a largely WordPress background I was initially taken aback by some of the paradigms at the core of EE. In WordPress you have posts and custom post types, Drupal has the all powerful node and ExpressionEngine has…channels. The structure of an entry is dictated by the channel it is published in and the fields that channel has. EE’s content storage system is fairly straightforward when implementing a simple brochure site or blog where post types are few and their structure is simple.</p><p>\r\n\tThe College of Design site however, functions as an informational portal for the department within the larger University. On top of hundreds of informational pages across multiple sections there are staff profiles, galleries of work, dynamically generated content sliders, dynamic backgrounds — and that’s just on the homepage. Well-defined content structure is important in any project and was absolutely vital in this one.</p><h3>\r\n\tThe Problem with Pages\r\n</h3><p>\r\n\tAs mentioned above, most of ExpressionEngine’s content management happens via channels. There is the concept of a Page in the vanilla EE install but it’s disabled by default and encapsulated in a separate module. The College of Design site called for hierarchical page relationships with different templates for parent and child pages. It’s a a relatively common mode of organization but proved difficult to implement with channels alone. Therefore, I was faced with an unsavory choice: build and configure the channels so all entries are easily accessible from the same template, or build a template with conditional logic for every sub-category and content type.</p><p>\r\n\tThe first option makes the front-end code much simpler but results in all the hierarchical content being chucked into the same “bucket” within the CMS, making actual content management a nightmare. The second option makes for templates bloated with conditional statements and hard-coded constants that are then duplicated for each section within the hierarchy. Both would solve the problem but the concessions involved in each were more than I was willing to stomach.</p><h3>\r\n\tDeus Ex Taxonomy\r\n</h3><p>\r\n\tAfter the channel-based publishing, the hardest thing for me to wrap my head around was the plugin ecosystem. To its credit, EE is very flexible once you understand how to use it. However, like most content management systems, not all the functionality you want exists out-of-the-box. There is the possibility of extension via modules and plugins but since ExpressionEngine is proprietary software, so too are many of the plugins. Perhaps this is reasonable, but it’s a hard pill to swallow for someone accustomed to building with open source tools. If the WordPress Plugin Directory is a Chinese buffet,  then EE charges you $5 for water.</p><p>\r\n\tStill, despite much grumbling and dragging of feet, I eventually found my magic bullet in the form of Taxonomy. With it I was able to build hierarchical menus entirely independent of the underlying channel structure and provide override links to any URL on a per-item basis. Entries could now be organized in as many channels as necessary while appearing as one logical section to the user. At the code level I only needed to add a few template tags rather than building a self-generating menu system from the ground up.</p><p>\r\n\tBelow is the code for a custom menu on one of the departmental landing pages:</p><p>\r\n\tAs you can see, there are lots of conditionals. Additionally, there’s plenty of fiddling around with URL slugs and entry IDs to get the URL structure to appear right on “sub” pages. It works for this purpose but it’s too specific to use elsewhere.</p><h3>\r\n\tEnter Taxonomy:\r\n</h3><p>\r\n\tIt’s much more concise to say the least. Taxonomy does all the footwork of building out sub-navs, adding active classes and handling URLs. Granted, there is still some configuration overhead and there are several options and functions that I didn’t use for this build. Even so, dropping Taxonomy in was akin to sweeping that CRT monitor onto the floor and replacing it with one of those new hypercrystal OLED widescreen cinema displays. You know, the ones with the iPod dock.</p><p><em>Cover photo by </em><a href=\"https://www.flickr.com/photos/marfis75/\"><em>Martin Fisch</em></a><br></p>",
+  "Slug": "flexible-hierarchical-navigation",
+  "slug_history": "--- []\n",
+  "visits": 994,
+  "Published": "2012-10-11T08:00:00+00:00",
+  "Authorname": "Biko Tushinde",
+  "category_id": 1,
+  "image_uid": "2014/07/29/17/25/13/153/file",
+  "created_at": "2014-06-05T18:24:44+00:00",
+  "updated_at": "2015-06-15T19:22:33+00:00",
+  "markdown": "",
+  "image_alt_text": "",
+  "featured": false,
+  "database_id": 297,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  },
+  "tags": [
+    {
+      "type": "tag",
+      "id": "tag_15"
+    }
+  ]
+}

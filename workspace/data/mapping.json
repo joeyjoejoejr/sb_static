@@ -1,0 +1,59 @@
+{
+  "BlogCategories": {
+    "content_type": "Category",
+    "type": "entry",
+    "fields": {
+      "name": "Name",
+      "slug": "Slug"
+    },
+    "links": {
+      "many": [{
+        "relation_to": "BlogPosts",
+        "primary_id": "category_id"
+      }]
+    }
+  },
+
+  "BlogPosts": {
+    "content_type": "Post",
+    "type": "entry",
+    "fields": {
+      "title": "Title",
+      "summary": "Summary",
+      "body": "Body",
+      "slug": "Slug",
+      "published_at": "Published",
+      "author_name": "Authorname"
+    },
+    "links": {
+      "belongs_to": [{
+        "relation_to": "BlogCategories",
+        "foreign_id": "category_id"
+      }],
+
+      "many_through": [{
+        "relation_to": "BlogTags",
+        "primary_id": "post_id",
+        "foreign_id": "tag_id",
+        "through": "blog_taggings"
+      }]
+    }
+  },
+
+  "BlogTags": {
+    "content_type": "Tag",
+    "type": "entry",
+    "fields": {
+      "name": "Name",
+      "slug": "Slug"
+    },
+    "links": {
+      "many_through": [{
+        "relation_to": "BlogPosts",
+        "primary_id": "tag_id",
+        "foreign_id": "post_id",
+        "through": "blog_taggings"
+      }]
+    }
+  }
+}

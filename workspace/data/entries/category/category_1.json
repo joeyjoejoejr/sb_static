@@ -1,0 +1,201 @@
+{
+  "id": "category_1",
+  "Name": "Development",
+  "Slug": "development",
+  "image_uid": null,
+  "database_id": 1,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_290"
+    },
+    {
+      "type": "post",
+      "id": "post_383"
+    },
+    {
+      "type": "post",
+      "id": "post_386"
+    },
+    {
+      "type": "post",
+      "id": "post_360"
+    },
+    {
+      "type": "post",
+      "id": "post_320"
+    },
+    {
+      "type": "post",
+      "id": "post_247"
+    },
+    {
+      "type": "post",
+      "id": "post_236"
+    },
+    {
+      "type": "post",
+      "id": "post_248"
+    },
+    {
+      "type": "post",
+      "id": "post_313"
+    },
+    {
+      "type": "post",
+      "id": "post_227"
+    },
+    {
+      "type": "post",
+      "id": "post_279"
+    },
+    {
+      "type": "post",
+      "id": "post_384"
+    },
+    {
+      "type": "post",
+      "id": "post_231"
+    },
+    {
+      "type": "post",
+      "id": "post_318"
+    },
+    {
+      "type": "post",
+      "id": "post_316"
+    },
+    {
+      "type": "post",
+      "id": "post_361"
+    },
+    {
+      "type": "post",
+      "id": "post_340"
+    },
+    {
+      "type": "post",
+      "id": "post_223"
+    },
+    {
+      "type": "post",
+      "id": "post_298"
+    },
+    {
+      "type": "post",
+      "id": "post_272"
+    },
+    {
+      "type": "post",
+      "id": "post_241"
+    },
+    {
+      "type": "post",
+      "id": "post_314"
+    },
+    {
+      "type": "post",
+      "id": "post_325"
+    },
+    {
+      "type": "post",
+      "id": "post_359"
+    },
+    {
+      "type": "post",
+      "id": "post_328"
+    },
+    {
+      "type": "post",
+      "id": "post_259"
+    },
+    {
+      "type": "post",
+      "id": "post_342"
+    },
+    {
+      "type": "post",
+      "id": "post_239"
+    },
+    {
+      "type": "post",
+      "id": "post_368"
+    },
+    {
+      "type": "post",
+      "id": "post_363"
+    },
+    {
+      "type": "post",
+      "id": "post_308"
+    },
+    {
+      "type": "post",
+      "id": "post_333"
+    },
+    {
+      "type": "post",
+      "id": "post_347"
+    },
+    {
+      "type": "post",
+      "id": "post_322"
+    },
+    {
+      "type": "post",
+      "id": "post_344"
+    },
+    {
+      "type": "post",
+      "id": "post_263"
+    },
+    {
+      "type": "post",
+      "id": "post_335"
+    },
+    {
+      "type": "post",
+      "id": "post_250"
+    },
+    {
+      "type": "post",
+      "id": "post_221"
+    },
+    {
+      "type": "post",
+      "id": "post_297"
+    },
+    {
+      "type": "post",
+      "id": "post_246"
+    },
+    {
+      "type": "post",
+      "id": "post_245"
+    },
+    {
+      "type": "post",
+      "id": "post_220"
+    },
+    {
+      "type": "post",
+      "id": "post_378"
+    },
+    {
+      "type": "post",
+      "id": "post_365"
+    },
+    {
+      "type": "post",
+      "id": "post_353"
+    },
+    {
+      "type": "post",
+      "id": "post_278"
+    },
+    {
+      "type": "post",
+      "id": "post_315"
+    }
+  ]
+}

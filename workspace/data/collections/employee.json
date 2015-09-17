@@ -1,0 +1,73 @@
+{
+  "id": "4GSSXcFKE8gwswoWOOGCME",
+  "name": "Employee",
+  "description": "",
+  "displayField": "title",
+  "fields": [
+    {
+      "name": "Name",
+      "id": "name",
+      "type": "Symbol"
+    },
+    {
+      "name": "Title",
+      "id": "title",
+      "type": "Symbol"
+    },
+    {
+      "name": "Mugshot",
+      "id": "mugshot",
+      "type": "Asset",
+      "link": "Link"
+    },
+    {
+      "name": "About",
+      "id": "about",
+      "type": "Text"
+    },
+    {
+      "name": "Slug",
+      "id": "slug",
+      "type": "Symbol"
+    },
+    {
+      "name": "Email",
+      "id": "email",
+      "type": "Symbol"
+    },
+    {
+      "name": "Seniority",
+      "id": "seniority",
+      "type": "Integer"
+    },
+    {
+      "name": "Published",
+      "id": "published",
+      "type": "Boolean"
+    },
+    {
+      "name": "Imagealttext",
+      "id": "imageAltText",
+      "type": "Symbol"
+    },
+    {
+      "name": "Mugshotalttext",
+      "id": "mugshotAltText",
+      "type": "Symbol"
+    },
+    {
+      "name": "Roles",
+      "id": "roles",
+      "type": "Array",
+      "link_type": "Entry",
+      "link": "Link"
+    },
+    {
+      "name": "Posts",
+      "id": "posts",
+      "type": "Array",
+      "link_type": "Entry",
+      "link": "Link"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "4cEvdDPmooOGUOSAwwQIwA",
+  "name": "Category",
+  "description": "",
+  "displayField": "name",
+  "fields": [
+    {
+      "name": "Name",
+      "id": "name",
+      "type": "Symbol"
+    },
+    {
+      "name": "Slug",
+      "id": "slug",
+      "type": "Symbol"
+    },
+    {
+      "name": "Image",
+      "id": "image",
+      "type": "Asset",
+      "link": "Link"
+    },
+    {
+      "name": "Posts",
+      "id": "posts",
+      "type": "Array",
+      "link_type": "Entry",
+      "link": "Link"
+    }
+  ]
+}

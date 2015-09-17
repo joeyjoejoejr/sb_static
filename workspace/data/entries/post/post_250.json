@@ -1,0 +1,29 @@
+{
+  "id": "post_250",
+  "Title": "New iOS 7 Tool: UIKit Dynamics",
+  "Summary": "So you got the new iOS 7, huh? Believe it or not, under all that new flat prettyness lies a ton of neat new APIs and frameworks! I am going to briefly go into a new tool for iOS developers called UIKit Dynamics. UIKit Dynamics is a full physics engine integrated into UIKit. Using UIKit…",
+  "Body": "<p>So you got the new iOS 7, huh? Believe it or not, under all that new flat prettyness lies a ton of neat new APIs and frameworks! I am going to briefly go into a new tool for iOS developers called UIKit Dynamics.</p><p>UIKit Dynamics is a full physics engine integrated into UIKit. Using UIKit Dynamics allows developers to create user interfaces that feel real. This means that UI objects can be considered physical objects that respond to gestures, touches, and changes to orientation. Developers may add behaviors such as gravity, attachments, and forces.</p><p>Want to see this in action? Go ahead and pull out your iPhone (sorry Android users!). On the lock screen there is a camera icon in the bottom right to allow you to quickly navigate to your camera app. Tap and hold on the icon and drag the screen almost half way up – now let go and watch what happens. Did you see the bounce effect at the bottom of the screen? Try again, but this time only drag the view up so you can just see the take picture button. You will notice there was even less bounce. Now the fun part. Do the same thing, but instead of just letting it go, swipe your finger toward the bottom of the screen like you’re throwing the view down. You will noticeably see a larger bounce from the view depending how fast you swiped the view and if you swipe it fast enough, it will bounce all the way up and launch the camera app!</p><p>In this example I will add a 100×100 square (green) at the top of my view. I will then add a barrier bar (yellow) about half way down the view. The square will drop from the top (gravity) and bounce off the bar (collision) and then bounce to the bottom of the view.</p><p>Using just these lines of code to add gravity, collision, and item behavior:</p><p style=\"text-align: center;\"><a href=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/Jordan-image1.png\"><img class=\"alignnone size-full wp-image-4319\" alt=\"UIKit Dynamics: Gravity, Collision, Item Behavior\" src=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/Jordan-image1.png\" width=\"867\" height=\"401\"></a></p><p>Produces the output of the following:</p><p style=\"text-align: center;\"><a href=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/Jordan-image2.png\"><img class=\"alignnone size-full wp-image-4320\" alt=\"UIKit Dynamics Code Output\" src=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/Jordan-image2.png\" width=\"434\" height=\"704\"></a></p><p>As you can see the square drops from the top of the view and settles at the bottom. The gray squares show the path of the green square and how it reacted to gravity and collision.</p><p>That is all, I hope you enjoyed learning something new that iOS 7 has to offer! I am looking forward to utilizing UIKit Dynamics into a real world application to give it that extra special touch. Stay tuned for my next post where I highlight another new iOS7 feature.&nbsp;Comment below with your favorite feature of iOS7.</p><p><em>Smashing Boxes is a web and mobile app development company know for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p><p><em>Cover photo by&nbsp;</em><a href=\"https://www.flickr.com/photos/breatheindigital/\" style=\"background-color: initial;\"><em>Ryan Hyde</em></a></p>",
+  "Slug": "new-ios-7-tool-uikit-dynamics",
+  "slug_history": "--- []\n",
+  "visits": 509,
+  "Published": "2013-10-31T04:00:00+00:00",
+  "Authorname": "Jordan Clifton",
+  "category_id": 1,
+  "image_uid": "2014/07/29/14/46/00/204/file",
+  "created_at": "2014-06-05T18:21:56+00:00",
+  "updated_at": "2014-07-31T21:02:43+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 250,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  },
+  "tags": [
+    {
+      "type": "tag",
+      "id": "tag_3"
+    }
+  ]
+}

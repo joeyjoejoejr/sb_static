@@ -1,0 +1,20 @@
+{
+  "id": "tag_16",
+  "Name": "Back End Development",
+  "Slug": "back-end-development",
+  "database_id": 16,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_383"
+    },
+    {
+      "type": "post",
+      "id": "post_384"
+    },
+    {
+      "type": "post",
+      "id": "post_386"
+    }
+  ]
+}

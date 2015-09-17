@@ -1,0 +1,12 @@
+{
+  "id": "tag_23",
+  "Name": "Code Academy",
+  "Slug": "code-academy",
+  "database_id": 23,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_378"
+    }
+  ]
+}

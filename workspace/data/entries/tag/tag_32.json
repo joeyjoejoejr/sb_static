@@ -1,0 +1,24 @@
+{
+  "id": "tag_32",
+  "Name": "Growth Engineering",
+  "Slug": "growth-engineering",
+  "database_id": 32,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_363"
+    },
+    {
+      "type": "post",
+      "id": "post_351"
+    },
+    {
+      "type": "post",
+      "id": "post_346"
+    },
+    {
+      "type": "post",
+      "id": "post_336"
+    }
+  ]
+}

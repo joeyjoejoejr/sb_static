@@ -1,0 +1,23 @@
+{
+  "id": "post_306",
+  "Title": "Custom Drawing with the iOS SDK",
+  "Summary": "Custom drawing in iOS is one of the most important topics to grasp for iOS Developers. Why? For starters, drawing with code is faster than fetching an image from disk. Perhaps more important is that providing high quality graphics can make your app stand out from the competition. If you are writing custom views, you are also…",
+  "Body": "<p>Custom drawing in iOS is one of the most important topics to grasp for iOS Developers. Why? For starters, drawing with code is faster than fetching an image from disk. Perhaps more important is that providing&nbsp;high quality graphics can make your app stand out from the competition.</p><p>If&nbsp;you are writing custom views, you are also responsible for providing the&nbsp;drawing code. iOS&nbsp;accommodates&nbsp;two popular ways of custom drawing for your application: OpenGL and native rendering which includes Quartz, Core Animation, and&nbsp;UIKit.</p><p>By using the <a href=\"https://developer.apple.com/library/mac/documentation/graphicsimaging/conceptual/drawingwithquartz2d/Introduction/Introduction.html\">Quartz 2D</a> drawing API, you can implement custom views.  Quartz 2D is also known as Core Graphics (CG). When drawing custom views, CG offers a myriad of options. CG provides path based drawing, color management, off-screen rendering, and anti-aliased rendering. Additionally, it contains PDF options for PDF creation, PDF displaying and PDF parsing (reading the byte code in the PDF file stream).</p><p>One note of caution is to always remember to override&nbsp;the drawRect method when drawing in your custom view. Use the drawRect method to write your code to draw, but never call the drawRect method in your&nbsp;code. Instead, call the setNeedsDisplay or setNeedsDisplayInRect&nbsp;method to notify the system that your view requires redrawing. Then the system can queue your setNeedsDisplay calls and automatically sweep through. During the sweep the system scans the view hierarchy and redraws views based on those who called setNeedsDisplay.</p><p>At the most basic level CG allows you to draw paths, patterns, shadows and&nbsp;gradients into contexts. There are several different contexts: PDF, Bitmap, Printing, and Window Graphics. While the PDF context generates PDF documents, the&nbsp;Bitmap context generates jpg and png images. The printing context is for, you guessed it, drawing something to be printed. Finally, the Window Graphics context helps with tasks like free-hand drawing or building paths to create shapes for on-screen viewing.</p><p>By utilizing Core Graphics in your next application you can improve UX and increase display speed of custom views on your iOS device. What’s not to love?</p><p><em>Smashing Boxes is a web and mobile app development company know for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p>",
+  "Slug": "custom-drawing-with-the-ios-sdk",
+  "slug_history": "--- []\n",
+  "visits": 914,
+  "Published": "2012-09-04T04:00:00+00:00",
+  "Authorname": "Matt McFarling",
+  "category_id": 4,
+  "image_uid": "2014/07/21/12/58/14/324/file",
+  "created_at": "2014-06-05T18:25:02+00:00",
+  "updated_at": "2014-07-31T21:02:25+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 306,
+  "category": {
+    "type": "Entry",
+    "id": "category_4"
+  }
+}

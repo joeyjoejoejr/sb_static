@@ -1,0 +1,16 @@
+{
+  "id": "tag_14",
+  "Name": "User Interface",
+  "Slug": "user-interface",
+  "database_id": 14,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_362"
+    },
+    {
+      "type": "post",
+      "id": "post_377"
+    }
+  ]
+}

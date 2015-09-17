@@ -1,0 +1,23 @@
+{
+  "id": "post_228",
+  "Title": "White Paper: Empowering Patients Through mHealth",
+  "Summary": "We recognize there is a need for targeted and effective mobile health applications, particularly to aid in the problem of medication nonadherence. Nonadherence is a flourishing problem in healthcare, impacting many different stakeholders while losing the US healthcare industry hundreds of billions of dollars a year. We reviewed the existing medication nonadherence literature and assessed…",
+  "Body": "<p dir=\"ltr\">We recognize there is a need for targeted and effective mobile health applications, particularly to aid in the problem of medication nonadherence. Nonadherence is a flourishing problem in healthcare, impacting many different stakeholders while losing the US healthcare industry hundreds of billions of dollars a year.</p><p dir=\"ltr\">We reviewed the existing medication nonadherence literature and assessed the ways mobile applications have been applied to tackle the issue. Upon evaluating the mHealth application landscape, as well as current mobile application-related legislation and HIPAA compliance regulations, we found many ways that mHealth can be applied more compellingly. To adjust patient behavior and increase adherence, patient/provider relationships must be strengthened.</p><p dir=\"ltr\">mHealth applications can assist by easing communication between healthcare providers and patients and by improving patient education by making materials accessible to a larger population. Most currently available mHealth adherence apps do not work because they inadequately target relatively simple reasons for nonadherence, such as forgetfulness, but do not incorporate proven behavioral models to distribute tailored messages that can positively adjust patient behavior. We have also found it apparent that payers must soon address reimbursement of mHealth apps prescribed and used by physicians or apps will never be widely adopted and nobody will reap the benefits of the apps.</p><p>To ensure success, it will be important to develop HIPAA-compliant mHealth apps that address nonadherence by empowering patients through improving patient/provider communication and increasing patient education.</p><p>If you are interested in learning more about the issue of nonadherence,&nbsp;<a href=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2014/02/Empowering-Patients-Through-mHealth.pdf\">download our white paper</a>, <em>Empowering Patients Through mHealth.</em>&nbsp;How mobile health applications can help save billions of dollars by addressing medication nonadherence, or contact us for find out more.</p><p><em>Smashing Boxes is a web and mobile app development company known for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p>",
+  "Slug": "white-paper-empowering-patients-through-mhealth",
+  "slug_history": "--- []\n",
+  "visits": 798,
+  "Published": "2014-02-06T05:00:00+00:00",
+  "Authorname": "Alicia Midland",
+  "category_id": 4,
+  "image_uid": "2014/08/01/13/13/13/324/file",
+  "created_at": "2014-06-05T18:21:15+00:00",
+  "updated_at": "2014-08-11T15:41:31+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 228,
+  "category": {
+    "type": "Entry",
+    "id": "category_4"
+  }
+}

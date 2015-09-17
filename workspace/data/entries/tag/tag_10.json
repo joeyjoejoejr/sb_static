@@ -1,0 +1,12 @@
+{
+  "id": "tag_10",
+  "Name": "Brand Identity",
+  "Slug": "brand-identity",
+  "database_id": 10,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_375"
+    }
+  ]
+}

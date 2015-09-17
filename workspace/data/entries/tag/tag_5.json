@@ -1,0 +1,12 @@
+{
+  "id": "tag_5",
+  "Name": "Branding",
+  "Slug": "branding",
+  "database_id": 5,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_222"
+    }
+  ]
+}

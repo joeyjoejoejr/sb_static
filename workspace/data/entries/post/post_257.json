@@ -1,0 +1,29 @@
+{
+  "id": "post_257",
+  "Title": "Dissecting Third-Party Libraries Through Design Patterns",
+  "Summary": "I’m the type of programmer that loves to break things down into the smallest possible pieces. This isn’t just true with code. It's also with how I look at life. I’ve always been a deep-thinker, trying to reach out and grasp some kind of greater understanding. Ironically, looking at the tiniest aspect of something can…",
+  "Body": "<p>I’m the type of programmer that loves to break things down into the smallest possible pieces. This isn’t just true with code. It's also with how I look at life. I’ve always been a deep-thinker, trying to reach out and grasp some kind of greater understanding. Ironically, looking at the tiniest aspect of something can sometimes reveal something new in what we all consider to be the bigger picture. Engineering, philosophy, and science provide this opportunity more often than not.</p><p>I don’t think I would be the programmer I am today if I didn’t bother to look at the bottom-most levels of the tools I’ve used in the past, and the ones that I choose to use today. It’s that “Aha! So that’s how it works” moment that enables you to take the next step forward in your continued development; an education that forces you to constantly evolve as challenges are laid before you on a daily basis.</p><p>Learning design patterns has enabled me to provide myself with the tools I need in order to conquer these challenges. They have given me the ability to write my own libraries instead of relying upon whatever time-savers dot the web. Let’s take <a href=\"http://restkit.org/\">RestKit</a> for example:</p><p>A library such as RestKit exists so as to provide iOS developers, like myself, a convenient framework with which to spawn asynchronous network connections in order to communicate with a remote service. For most people, there’d be no reason to look deeper beyond the sentence I just wrote. Out-of-the-box, you have all the functionality you need to start hooking-up API calls in order to build an application that easily communicates with the cloud.</p><p>But for me, that isn’t enough. I personally don’t feel I’m doing my best if I don’t understand what’s going on under the hood. So, in that case, what would I need to write in order to achieve the same result? The following is my own implementation for an asynchronous networking solution:</p><ol>\r\n<li>A singleton dispatcher for network requests.</li><li>A generic request that can be configured by some metadata that is passed into it during initialization.</li><li>A command object that is constructed to store a reference to the caller of the asynchronous request as well as methods that trigger when certain events occur.</li><li>A URL factory that exists to dynamically generate URLs based upon the HTTP method invoked and the API called.</li><li>A mediator that utilizes loose coupling in order to target a specific HTTP method within the URL factory.</li><li>A generator that contains an aggregation of all URLs that can be possibly generated, organized by which API the URLs connect with.</li></ol><p id=\"attachment_4053\" style=\"width: 310px; text-align: center;\" class=\"wp-caption aligncenter\">\r\n<a href=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/MB-Dissecting-Third-Party-Libraries.png\"><img class=\"size-medium wp-image-4053\" alt=\"Network Communication Libraries\" src=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2013/10/MB-Dissecting-Third-Party-Libraries-300x285.png\" width=\"300\" height=\"285\"></a></p><p class=\"wp-caption-text\" style=\"text-align: center;\">My simple network communication library<br>(only six classes!)</p><p>So, that’s six classes total. I’m pretty sure if you look at RestKit (or <a href=\"https://github.com/AFNetworking/AFNetworking\">AFNetworking</a>, or any other networking library) you’ll find that it contains much more than six classes, but truthfully, you aren’t going to need anything more than that.</p><p>This solution has served me quite well since I built it around six months ago. It is easy to maintain and re-use (only two of the classes require re-writing per project). Its simplicity is part of its appeal, and is an ethos I try to abide by when I develop applications. Hopefully, as you discover more about software design patterns, you’ll not only find it easier to create your own tools, but also come to appreciate and embrace the elegance provided by simpler implementation. Good luck and comment if you have any questions or thoughts about libraries!</p><p><em>Smashing Boxes is a web and mobile app development company know for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p>",
+  "Slug": "dissecting-third-party-libraries-through-design-patterns",
+  "slug_history": "--- []\n",
+  "visits": 845,
+  "Published": "2014-07-28T20:50:39+00:00",
+  "Authorname": "Michael Brodeur ",
+  "category_id": 4,
+  "image_uid": "2014/08/01/13/12/19/514/file",
+  "created_at": "2014-06-05T18:22:12+00:00",
+  "updated_at": "2014-08-01T17:12:57+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 257,
+  "category": {
+    "type": "Entry",
+    "id": "category_4"
+  },
+  "tags": [
+    {
+      "type": "tag",
+      "id": "tag_3"
+    }
+  ]
+}

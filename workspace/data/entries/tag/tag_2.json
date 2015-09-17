@@ -1,0 +1,56 @@
+{
+  "id": "tag_2",
+  "Name": "Ruby on Rails",
+  "Slug": "ruby-on-rails",
+  "database_id": 2,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_341"
+    },
+    {
+      "type": "post",
+      "id": "post_353"
+    },
+    {
+      "type": "post",
+      "id": "post_333"
+    },
+    {
+      "type": "post",
+      "id": "post_359"
+    },
+    {
+      "type": "post",
+      "id": "post_360"
+    },
+    {
+      "type": "post",
+      "id": "post_361"
+    },
+    {
+      "type": "post",
+      "id": "post_365"
+    },
+    {
+      "type": "post",
+      "id": "post_248"
+    },
+    {
+      "type": "post",
+      "id": "post_382"
+    },
+    {
+      "type": "post",
+      "id": "post_383"
+    },
+    {
+      "type": "post",
+      "id": "post_384"
+    },
+    {
+      "type": "post",
+      "id": "post_386"
+    }
+  ]
+}

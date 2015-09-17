@@ -1,0 +1,28 @@
+{
+  "id": "tag_26",
+  "Name": "Inspiration",
+  "Slug": "inspiration",
+  "database_id": 26,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_375"
+    },
+    {
+      "type": "post",
+      "id": "post_378"
+    },
+    {
+      "type": "post",
+      "id": "post_380"
+    },
+    {
+      "type": "post",
+      "id": "post_223"
+    },
+    {
+      "type": "post",
+      "id": "post_348"
+    }
+  ]
+}

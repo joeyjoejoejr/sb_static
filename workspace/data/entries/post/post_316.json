@@ -1,0 +1,23 @@
+{
+  "id": "post_316",
+  "Title": "How to Convert EC2 AMI to VMDK for Vagrant",
+  "Summary": "First launch an EC2 instance with the desired AMI. Now we’ll need to enable root ssh access....",
+  "Body": "<p>\r\n\tFirst launch an EC2 instance with the desired AMI. Now we’ll need to enable root ssh access.</p><pre class=\"raw\">$ sudo perl -i -pe 's/#PermitRootLogin .*/PermitRootLogin without-password/' /etc/ssh/sshd_config\r\n$ sudo perl -i -pe 's/.*(ssh-rsa .*)/\\1/' /root/.ssh/authorized_keys\r\n$ sudo /etc/init.d/sshd reload # optional command&lt;br&gt;</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\t(Thanks to \r\n\t<a href=\"http://gurjeet-tech.blogspot.com/2012/02/allowing-root-access-in-amis.html\">Gurjeet Singh</a>)</p><p>\r\n\tNow we need to copy the running system to a local disk image:</p><p class=\"clear\">\r\n\t</p><p class=\"clear\">\r\n\t</p>\r\n\t<pre class=\"raw\">$ ssh -i ~/.ec2/your_key root@ec2-XX-XX-XX-X.compute-1.amazonaws.com 'dd if=/dev/xvda1 bs=1M | gzip' | gunzip | dd of=./ec2-image.raw\r\n\t</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\tNow to prepare a filesystem on a new image file:</p><pre class=\"raw\">$ dd if=/dev/zero of=vmdk-image.raw bs=1M count=10240 # create a 10gb image file\r\n$ losetup -fv vmdk-image.raw # mount as loopback device\r\n$ cfdisk /dev/loop0 # create a bootable partition, write, and quit\r\n$ losetup -fv -o 32256 vmdk-image.raw # mount the partition with an offset\r\n$ fdisk -l -u /dev/loop0 # get the size of the partition\r\n$ mkfs.ext4 -b 4096 /dev/loop1 $(((20971519 - 63)*512/4096)) # format using the END number&lt;br&gt;</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\tNow we need to copy everything from the EC2 image to the empty image:</p><p class=\"clear\">\r\n\t</p><p class=\"clear\">\r\n\t</p>\r\n\t<pre class=\"raw\">$ losetup -fv ec2-image.raw\r\n$ mkdir -p /mnt/loop/1 /mnt/loop/2 # create mount points\r\n$ mount -t ext4 /dev/loop1 /mnt/loop/1 # mount vmdk-image\r\n$ mount -t ext4 /dev/loop2 /mnt/loop/2 # mount ami-image\r\n$ cp -a /mnt/loop/2/* /mnt/loop/1/\r\n\t</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\tNow install grub:</p><p class=\"clear\">\r\n\t</p><p class=\"clear\">\r\n\t</p>\r\n\t<pre class=\"raw\">$ cp /usr/lib/grub/x86_64-pc/stage* /mnt/loop/1/boot/grub/&lt;br&gt;</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\tCheck /boot/grub/menu.lst and ensure everything is correct (you will probably need to use root (hd0,0) to make it work with grub).</p><p>\r\n\tNow we can unmount the device (umount /dev/loop1) and convert the raw disk image to a vmdk image.</p><p class=\"tools\"></p><p class=\"wrap\"></p><p class=\"clear\">\r\n\t</p><p class=\"clear\">\r\n\t</p>\r\n\t<pre class=\"raw\">$ qemu-img convert -f raw -O vmdk vmdk-image.raw final.vmdk&lt;br&gt;</pre><p class=\"highlighted\">\r\n\t</p><p>\r\n\tNow just create a VirtualBox VM with the vmdk image mounted as the primary boot device.</p><p>\r\n\tUnfortunately at this point I could not get the Amazon Linux kernel to boot inside VirtualBox. I tried recompiling without Xen support, but still kept running into one problem or another. The only way that I was able to boot into a working system was to copy over my Ubuntu 11.10 kernel and initrd images. If anyone is able to make the Amazon Linux kernel run inside VirtualBox, please leave a comment here or on my \r\n\t<a href=\"http://serverfault.com/questions/374861/converting-an-ec2-ami-to-vmdk-image\">ServerFault question</a>.</p><p><em>Did this post make sense to you? Then check out our technical job openings&nbsp;</em><a href=\"http://smashingboxes.com/jobs\">here</a><em>.&nbsp;</em></p><p><em><a href=\"http://smashingboxes.com/work\" style=\"background-color: initial;\"></a>Cover photo by&nbsp;</em><a href=\"http://unsplash.com/post/87343106574/download-by-mario-calvo\" style=\"background-color: initial;\"><em>Mario Calvo</em></a></p>",
+  "Slug": "how-to-convert-ec2-ami-to-vmdk-for-vagrant",
+  "slug_history": "---\n- convert-ec2-ami-to-vmdk-for-use-with-vagrant\n",
+  "visits": 8966,
+  "Published": "2012-03-29T16:00:00+00:00",
+  "Authorname": "Reed Law",
+  "category_id": 1,
+  "image_uid": "2014/07/29/17/21/52/962/file",
+  "created_at": "2014-06-05T18:25:24+00:00",
+  "updated_at": "2014-12-18T23:02:42+00:00",
+  "markdown": "",
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 316,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  }
+}

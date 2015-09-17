@@ -1,0 +1,23 @@
+{
+  "id": "post_241",
+  "Title": "The Beauty of Ruby",
+  "Summary": "If you read the title and thought I was going to talk about the gemstone, you are in the right place. This series is intended for non-developers to understand why some of us developers, prefer Ruby over other languages. “Ruby is simple in appearance, but is very complex inside, just like our human body” says…",
+  "Body": "<p>\r\n\tIf you read the title and thought I was going to talk about the gemstone, you are in the right place. This series is intended for non-developers to understand why some of us developers, prefer Ruby over other languages.</p><p>\r\n\t“\r\n\t<a href=\"https://www.ruby-lang.org/\">Ruby</a> is simple in appearance, but is very complex inside, just like our human body” says Yukihiro “Matz” Matsumoto, its creator. After 7 years in school studying computer science, I didn’t feel like doing “rocket science” the rest of my life. Not all computer scientists (let’s say developers from now on) enjoy dealing with the underlying complexities of computers every day. While studying, my area of interest was to solve complex problems with simple technology and Ruby fit like a glove.</p><p>\r\n\tThis blog post started 8 months ago with this \r\n\t<a href=\"https://twitter.com/leonelgalan/status/310047686994849792\">tweet</a>. I have been coding for a while and every day I am pleasantly surprised about how pretty my code looks thanks to Ruby. The resulting code is readable, even for non-developers, but more importantly, for other developers that will contribute to the project later on.</p><h3><strong>Examples</strong></h3><p>\r\n\t<strong>Let me know which one you understand the most and which one is the prettiest</strong> (they don’t have to be two, see <a href=\"http://www.ted.com/talks/richard_seymour_how_beauty_feels.html\">Richard Seymour: How beauty feels</a> and how “Form is Function”).</p><p>\r\n\tI’m stealing \r\n\t<a href=\"http://wit.io/posts/ruby-is-beautiful-but-im-moving-to-python\">David Jacobs’</a> ridiculous Java class name to make my point, Java is not a scripting language so it requires some structure to get started. My PHP skills are rusty so I asked myself, colleagues, and Google what is the easiest way of getting the <a href=\"http://php.net/manual/en/function.time.php\">next week in PHP</a> (see the code examples below).</p><h5><strong>Ruby</strong></h5>\r\n<pre class=\"brush: ruby; title: ; notranslate\" title=\"\">&lt;p&gt;1.week.from_now\r\n#=&gt; Tue, 12 Nov 2013 11:40:37 EST -05:00&lt;/p&gt;\r\n</pre><h5><strong>PHP</strong></h5>\r\n<pre class=\"brush: php; title: ; notranslate\" title=\"\">&lt;?php\r\necho date('Y-m-d', strtotime('+1 week'));\r\n// 2 Warnings and ...\r\n// 2013-11-12\r\n?&gt;&lt;br&gt;\r\n</pre><h5><strong>Java</strong></h5>\r\n<pre class=\"brush: java; title: ; notranslate\" title=\"\">import java.util.Calendar;\r\nclass ThisIsAClassIDontReallyWantToNameButJavaMakesMe {\r\n  public static void main() {\r\n    Calendar calendar = Calendar.getInstance();\r\n    calendar.add(Calendar.DAY_OF_MONTH, 7);\r\n    System.out.printf(\"%tF%n\", calendar);\r\n    // 2013-11-12\r\n  }\r\n}\r\n</pre><p>\r\n\tHopefully these examples proved to you that Ruby code is the prettiest and results in the most readable text. This allows even non-developers to somewhat understand your code even without comments. Stay tuned for my next post in the series and let us know in the comments what you love (or don’t love) about Ruby!</p><p><em>Smashing Boxes is a web and mobile app development company known for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p>",
+  "Slug": "the-beauty-of-ruby",
+  "slug_history": "---\n- the-beauty-of-ruby-part-1\n",
+  "visits": 505,
+  "Published": "2013-12-03T05:00:00+00:00",
+  "Authorname": "Leonel Galán",
+  "category_id": 1,
+  "image_uid": "2014/07/21/13/31/06/369/file",
+  "created_at": "2014-06-05T18:21:40+00:00",
+  "updated_at": "2014-08-11T15:16:52+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 241,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "post_340",
+  "Title": "Computing with Clojure ",
+  "Summary": "Computing with Clojure. ",
+  "Body": "<p>\r\n\tLast month, we hosted our second Stacked! Meetup. Following a brief happy hour and networking session, we were happy to present front-end programmer Josh Bielick and our own Clinton Dreisbach,&nbsp;back-end guru and&nbsp;instructor at the&nbsp;\r\n\t<a href=\"http://academy.smashingboxes.com/\" target=\"_blank\" style=\"background-color: initial;\">Iron Yard Academy powered by Smashing Boxes</a>. Josh discussed over selection and modularity in CSS and&nbsp;Clinton gave an introduction to computing with Clojure. Check out the videos below and join Stacked!&nbsp;<a href=\"http://meetup.com/stacked\">here</a>.</p><p><br>\r\n\t<strong>Clinton Dreisbach - Computing with Clojure</strong></p>\r\n<object width=\"560\" height=\"315\"><param name=\"movie\" value=\"//www.youtube.com/v/aO80e7fL_wA?hl=en_US&amp;version=3\"><param name=\"allowFullScreen\" value=\"true\"><param name=\"allowscriptaccess\" value=\"always\"><embed src=\"//www.youtube.com/v/aO80e7fL_wA?hl=en_US&amp;version=3\" type=\"application/x-shockwave-flash\" width=\"560\" height=\"315\" allowscriptaccess=\"always\" allowfullscreen=\"true\">\r\n<p>\r\n\t<em style=\"background-color: initial;\"><br>\r\n\t</em>\r\n</p>\r\n<p>\r\n\t<strong>Josh Bielick - Over Selection and Modularity</strong>\r\n</p>\r\n<object width=\"560\" height=\"315\"><param name=\"movie\" value=\"//www.youtube.com/v/4SUdcSQqtAQ?hl=en_US&amp;version=3\"><param name=\"allowFullScreen\" value=\"true\"><param name=\"allowscriptaccess\" value=\"always\"><embed src=\"//www.youtube.com/v/4SUdcSQqtAQ?hl=en_US&amp;version=3\" type=\"application/x-shockwave-flash\" width=\"560\" height=\"315\" allowscriptaccess=\"always\" allowfullscreen=\"true\">\r\n<p><em>Smashing Boxes is a web and mobile app development company know for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\">Take a look at our work.</a></p>\r\n</object></object>",
+  "Slug": "stacked-meetup-looks-deeper-into-css-and-clojure",
+  "slug_history": "--- []\n",
+  "visits": 556,
+  "Published": null,
+  "Authorname": "",
+  "category_id": 1,
+  "image_uid": "2014/08/14/10/39/34/431/file",
+  "created_at": "2014-08-14T14:03:14+00:00",
+  "updated_at": "2014-12-19T15:08:14+00:00",
+  "markdown": "",
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 340,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  }
+}

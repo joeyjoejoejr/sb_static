@@ -1,0 +1,16 @@
+{
+  "id": "tag_31",
+  "Name": "Wearables",
+  "Slug": "wearables",
+  "database_id": 31,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_379"
+    },
+    {
+      "type": "post",
+      "id": "post_381"
+    }
+  ]
+}

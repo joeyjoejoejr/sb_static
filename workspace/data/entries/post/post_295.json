@@ -1,0 +1,23 @@
+{
+  "id": "post_295",
+  "Title": "Balsamiq Hack",
+  "Summary": "There are many things that I love about using Balsamiq Mockups. For starters, saved mocks are easier to find on my computer instead of scattered throughout my various notebooks. More importantly, I can quickly create a wireframe that looks better than my hand drawings, but translates the roughness of a sketch. Unfortunately the program does…",
+  "Body": "<p>There are many things that I love about using <a href=\"http://balsamiq.com/products/mockups/\">Balsamiq Mockups</a>. For starters, saved mocks are easier to find on my computer instead of scattered throughout my various notebooks. More importantly, I can quickly create a wireframe that looks better than my hand drawings, but translates the roughness of a sketch.</p><p>Unfortunately the program does not have an infinite canvas in which to work. The workspace area will only adjust vertically and horizontally as you move your elements around the canvas. I’m coming from an <a href=\"http://www.adobe.com/products/fireworks.html\">Adobe</a> background where I’m easily able to zoom out or pan around and actually have some space between my design and the edge of the viewport. This may not seem like a big deal, but it really irks me. It irks me real bad.</p><p>\r\n<a href=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2012/10/magic-element.jpg\"><img class=\"alignright size-medium wp-image-1917\" title=\"magic-element\" alt=\"Balsamiq Hack\" src=\"http://sbblog.s3.amazonaws.com/wp-content/uploads/2012/10/magic-element-300x216.jpg\" width=\"300\" height=\"216\" style=\"padding: 10px;\"></a><br>\r\nLuckily, there’s a pretty simple workaround that solves my problem. Just add a small element to the page and drag it far down to the bottom right, farther than you feel you’ll need space for your mockup. The Magical Extra Element allows you to scroll both horizontally and vertically past your mockup, granting a little breathing room between the mockup and the edges of the canvas. Maybe I’m just weird, but this little trick really helped me get into using Balsamiq Mockups more often.</p><p>I hope this helps! Do you have any tips you’d like to share? I’m all ears (well, eyes). Comment below with your hacks.</p><p><em>Cover photo by </em><a href=\"https://www.flickr.com/photos/brianklug/\"><em>Brian Klug</em></a><br></p>",
+  "Slug": "balsamiq-hack",
+  "slug_history": "--- []\n",
+  "visits": 825,
+  "Published": "2012-10-31T08:00:00+00:00",
+  "Authorname": "Eric Guess",
+  "category_id": 3,
+  "image_uid": "2014/07/28/17/16/26/209/file",
+  "created_at": "2014-06-05T18:24:40+00:00",
+  "updated_at": "2015-06-15T21:34:29+00:00",
+  "markdown": "",
+  "image_alt_text": "",
+  "featured": false,
+  "database_id": 295,
+  "category": {
+    "type": "Entry",
+    "id": "category_3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "post_220",
+  "Title": "Using Coffeescript Classes to Extend Libraries",
+  "Summary": "Coffeescript classes provide an easy mechanism for creating child classes of anything that uses the prototypical inheritance pattern. The ‘extends‘ keyword creates a child object with it’s prototype being the class methods you define. For example: New instances of InfoWindow will have a prototype object containing the methods and properties of your class. That prototype’s…",
+  "Body": "<p>Coffeescript classes provide an easy mechanism for creating child classes of anything that uses the prototypical inheritance pattern. The ‘<strong>extends</strong>‘ keyword creates a child object with it’s prototype being the class methods you define. For example:</p>\r\n<pre class=\"brush: jscript; title: ; notranslate\" title=\"\"> class InfoWindow extends google.maps.InfoWindow\r\n</pre><p>New instances of InfoWindow will have a prototype object containing the methods and properties of your class. That prototype’s prototype will be the prototype of the object you are extending (i.e. <strong>google.maps.InfoWindow.prototype</strong>). This allows you to augment <strong>google.maps.InfoWindow</strong> and even write methods of the same name on your child class without clobberring the parent. To access the parent’s method of the same name, coffeescript provides the keyword ‘<strong>super</strong>‘. For example:</p>\r\n<pre class=\"brush: jscript; title: ; notranslate\" title=\"\"> class InfoWindow extends google.maps.InfoWindow\r\n   constructor: (@_template, @_map) -&gt;\r\n   open: (context) -\r\n     super @_map, context\r\n   update: -&gt;\r\n     @setContent @_template.innerHTML\r\n</pre><p>Those familiar with google maps API will know that <strong>google.maps.InfoWindow</strong> already has a <strong>.open()</strong> method. I want to augment what that method does but I don’t want to overwrite the method itself. To accomplish this, I extend <strong>google.maps.InfoWindow</strong> into my own class, define an ‘<strong>open</strong>‘ method, and have it wrap the native one by using the ‘<strong>super</strong>‘ keyword. This allows me to abstract away the first parameter (instance variable <strong>@_map</strong>) so I do not need to supply it each time I call <strong>.open()</strong>.</p><p>This ability to extend classes provides a clean and simple way to augment libraries you use and write code at a higher level. Happy extending!</p><p><em style=\"background-color: initial;\">Smashing Boxes is a web and mobile app development company know for creating a lasting experience through bold design and disrupting the status quo. We are entrepreneurs and craftsmen first, and a digital creative agency second. Inspired by our visionary clients, we transform ideas into innovative web and mobile applications. </em><a href=\"http://smashingboxes.com/work\" style=\"background-color: initial;\">Take a look at our work.</a></p><p><em><a href=\"http://smashingboxes.com/work\" style=\"background-color: initial;\"></a>Cover photo by&nbsp;</em><a href=\"http://leibow.com/\" style=\"background-color: initial;\"><em>Justin Leibow</em></a></p>",
+  "Slug": "using-coffeescript-classes-to-extend-libraries",
+  "slug_history": "--- []\n",
+  "visits": 1125,
+  "Published": "2014-05-15T04:00:00+00:00",
+  "Authorname": "Chris Mangum",
+  "category_id": 1,
+  "image_uid": "2014/07/28/17/31/40/922/file",
+  "created_at": "2014-06-05T18:21:01+00:00",
+  "updated_at": "2014-07-31T20:05:41+00:00",
+  "markdown": null,
+  "image_alt_text": null,
+  "featured": false,
+  "database_id": 220,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  }
+}

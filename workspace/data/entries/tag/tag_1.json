@@ -1,0 +1,12 @@
+{
+  "id": "tag_1",
+  "Name": "JS",
+  "Slug": "js",
+  "database_id": 1,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_361"
+    }
+  ]
+}

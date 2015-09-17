@@ -1,0 +1,24 @@
+#PATH to all data, this will create a folder in your current working directory
+data_dir: data
+
+#Connecting to the database
+adapter: postgres
+host: localhost
+database: sb_com
+user: joe
+password: 
+
+# Extract data from models:
+mapped:
+  tables:
+  - :blog_categories
+  - :blog_posts
+  - :blog_tags
+
+## MAPPING ##
+mapping_dir: data/mapping.json
+contentful_structure_dir: data/contentful_structure.json
+
+## CONVERT
+content_model_json: data/contentful_model.json
+converted_model_dir: data/contentful_structure.json

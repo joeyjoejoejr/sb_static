@@ -1,0 +1,33 @@
+{
+  "id": "post_383",
+  "Title": "Merging Rails and Ember-CLI - Part II",
+  "Summary": "How to implement HTML5 drag-n-drop functionality using Ember CLI. Plus techniques achieve a smooth development experience when combining a Rails API with an Ember CLI-powered front end. ",
+  "Body": "",
+  "Slug": "merging-rails-and-ember-cli-part-2",
+  "slug_history": "--- []\n",
+  "visits": 2449,
+  "Published": "2015-06-30T00:00:00+00:00",
+  "Authorname": "",
+  "category_id": 1,
+  "image_uid": "2015/06/29/10/52/42/230/file",
+  "created_at": "2015-06-29T14:28:27+00:00",
+  "updated_at": "2015-07-14T19:40:08+00:00",
+  "markdown": "##Why?\r\nIn [part 1](http://smashingboxes.com/ideas/merging-rails-and-ember-cli) of [Merging Rails with ember-cli](http://smashingboxes.com/ideas/merging-rails-and-ember-cli), I talked about techniques that I use to achieve a smooth development experience when combining a Rails API with an Ember CLI-powered front end. I wanted to build a simple app where people could vote for beer by ranking their favorites on a weighted 1 to N scale. However, I was unsure how Ember would handle a major component of the app: drag-n-drop.\r\n\r\nIn this post, I will go into more detail about how I implemented HTML5 drag-n-drop functionality for updating beer rankings. I will demonstrate how simple it was to build this functionality into my existing, non-dynamic list of beers.\r\n\r\n![](http://cl.ly/image/1e1D0m0J161V/Image%202014-12-03%20at%209.53.45%20AM.png)\r\n##VS\r\n![](http://f.cl.ly/items/1D2Q1y191W1o0C3V200s/Screen%20Recording%202014-11-10%20at%2010.27%20AM.gif)\r\n\r\n##Bootstrapping\r\n\r\nI love to use twitter bootstrap when I am prototyping a new idea. Just run...\r\n\r\n```\r\n$ bower install --save-dev ember-cli-bootstrap-sass\r\n```\r\n\r\n...then add the following to the top of your root scss stylesheet:\r\n\r\n**EmberApp/app/styles/app.scss**\r\n\r\n```\r\n@import \"bootstrap\";\r\n@import \"bootstrap/theme\";\r\n```\r\n\r\n##Drag-N-Drop\r\n\r\nWe've all heard this request before: \"I just want to be able to drag this item _here_ and this item _there_ and POOF, the change is made!\" Clients LOVE drag-n-drop. It is a feature I have implemented a million times before, but I almost **always** use some JQuery library that interfaces with a custom-built API for the sole purpose of building that ONE drag-n-drop component. I was seriously scared that drag-n-drop would be really hard to build in **pure** Ember, but I am pleased to say that I had it up and running in no time!\r\n\r\nThe first thing I did was hit the [docs](http://emberjs.com/api/). I was pleased to see that `EmberView` [supports drag and drop out of the box](http://emberjs.com/api/classes/Ember.View.html#toc_event-names). This worked out perfectly, since I knew I would need two views in this component: a line item and a slot to drop each line item into. So, I created myself a `line-item` and an `item-slot` view with the necessary `event dataTransfer` data.\r\n\r\nI had to comb through the w3c spec a bit, but I was able to come up with [some solid documentation on HTML5 drag-n-drop and the data transfer interface](http://www.w3.org/TR/2011/WD-html5-20110405/dnd.html#the-datatransfer-interface).\r\n\r\n**EmberApp/app/views/line-item.js**\r\n\r\n```js\r\nimport Ember from 'ember';\r\n\r\nexport default Ember.View.extend({\r\n  attributeBindings: ['draggable'],\r\n  draggable: 'true',\r\n  templateName: 'line-item',\r\n  classNames: 'line_item',\r\n\r\n  dragStart: function(ev){\r\n    var dragData = { id: this.content.get('id') };\r\n    ev.dataTransfer.setData('application/json', JSON.stringify(dragData));\r\n  }\r\n});\r\n\r\n```\r\n\r\n**EmberApp/app/templates/line-item.hbs**\r\n\r\n```html\r\n<span class='weight'>{{weight}}</span>\r\n<span class='name'>{{beer_name}}</span>\r\n```\r\n\r\n**EmberApp/app/views/item-slot.js**\r\n\r\n```js\r\nimport Ember from 'ember';\r\n\r\nexport default Ember.View.extend({\r\n  templateName: 'item-slot',\r\n\r\n  dragOver: function(ev){\r\n    ev.preventDefault();\r\n  },\r\n\r\n  drop: function(ev){\r\n    var data = JSON.parse(ev.dataTransfer.getData('application/json'));\r\n    this.get('controller').send('swap', data.id, this.content.get('id'));\r\n  }\r\n});\r\n```\r\n\r\n**EmberApp/app/templates/item-slot.hbs**\r\n\r\n```html\r\n{{view 'line-item' contentBinding='this'}}\r\n```\r\n\r\nLastly, I updated my ballot template to use these new views.\r\n\r\n**EmberApp/app/templates/ballot.hbs**\r\n\r\n```html\r\n{{#each this.model.sorted_line_items}}\r\n  <div class='row'>\r\n    <div class='col-xs-12'>\r\n      {{view 'item-slot' contentBinding='this'}}\r\n    </div>\r\n  </div>\r\n{{/each}}\r\n<div class='row'>\r\n  <div class='col-xs-12 new_beer'>\r\n    {{#view 'new-beer' contentBinding='this'}}\r\n      <input type='text' placeholder='+ ADD BEER'/>\r\n    {{/view}}\r\n  </div>\r\n</div>\r\n```\r\n\r\nThen I update my controller to handle swapping of weights between two line items. It's a little dirty, but it gets the job done:\r\n\r\n**EmberApp/app/controller/ballot.js**\r\n\r\n```\r\nimport Ember from 'ember';\r\n\r\nexport default Ember.Controller.extend({\r\n  sortProperties: ['weight'],\r\n\r\n  actions: {\r\n    swap: function(line_item_id_1, line_item_id_2) {\r\n      var li1, li1_weight, li2, li2_weight;\r\n      li1 = this.model.get('line_items').findBy('id', line_item_id_1);\r\n      li2 = this.model.get('line_items').findBy('id', line_item_id_2);\r\n      li1_weight = li1.get('weight');\r\n      li2_weight = li2.get('weight');\r\n      li1.set('weight', li2_weight);\r\n      li2.set('weight', li1_weight);\r\n    }\r\n  }\r\n});\r\n```\r\n\r\nThat’s it, drag-n-drop now works! Yet again Ember proves itself to be an amazing framework for building incredibly dynamic single-page apps with great speed.\r\n\r\nIn [Part 3]( http://smashingboxes.com/_/35cf7), I will show you how to persist these changes that you make to your backend Rails application!\r\n\r\n##Resources\r\n* [Ember-CLI Rails Github Repo](https://github.com/smashingboxes/blog-mergin_rails_ember_cli)\r\n* [HTML5 Drag and Drop](http://www.w3.org/TR/2010/WD-html5-20101019/dnd.html)\r\n* [Part I](http://smashingboxes.com/ideas/merging-rails-and-ember-cli)\r\n* [Part 3]( http://smashingboxes.com/_/35cf7)\r\n\r\n*Cover photo by  [OUCHcharley](https://www.flickr.com/photos/g-ratphotos/)*\r\n",
+  "image_alt_text": "Merging Rails and Ember-CLI",
+  "featured": false,
+  "database_id": 383,
+  "category": {
+    "type": "Entry",
+    "id": "category_1"
+  },
+  "tags": [
+    {
+      "type": "tag",
+      "id": "tag_2"
+    },
+    {
+      "type": "tag",
+      "id": "tag_16"
+    }
+  ]
+}

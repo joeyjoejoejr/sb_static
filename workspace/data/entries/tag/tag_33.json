@@ -1,0 +1,16 @@
+{
+  "id": "tag_33",
+  "Name": "mHealth",
+  "Slug": "mhealth",
+  "database_id": 33,
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_374"
+    },
+    {
+      "type": "post",
+      "id": "post_233"
+    }
+  ]
+}
