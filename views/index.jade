@@ -3,17 +3,13 @@ extends layout
 block content
   section.section-pink.home-header
     div.banner-carousel.owl-carousel.owl-theme
-      // - @featured_case_studies.each do |case_study|
-
-      //   // We don't want to go trying to render case studies without header
-      //   // backgrounds set, as they'll 500 or just have a blank box up top
-
-      //   - next unless case_study.background.present?
-      //   div class="item" style="background-image: url('#{case_study.background.url}');"
-      //     .project-description
-      //       h1=case_study.title
-      //       p.byline=case_study.description
-      //       a.view-more.button href="#{case_study.url}" View Project
+      each case_study in contentful.featured_case_studies
+        .item(style="background-image: url('#{asset(case_study.background)}');")
+          .project-description
+            h1=case_study.headerTitle
+            p.byline=case_study.headerSubtitle
+            a.view-more.button(href="work/#{case_study.title}") View Project
+            // a.view-more.button href="#{case_study.url}" View Project
 
   section.section-white.services
     .row.main
