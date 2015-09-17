@@ -1,0 +1,61 @@
+{
+  "id": "role_1",
+  "name": "Front-End Developer",
+  "created_at": "2014-06-03T20:17:58+00:00",
+  "updated_at": "2014-06-03T20:17:58+00:00",
+  "database_id": 1,
+  "employees": [
+    {
+      "type": "employee",
+      "id": "employee_22"
+    },
+    {
+      "type": "employee",
+      "id": "employee_4"
+    },
+    {
+      "type": "employee",
+      "id": "employee_17"
+    },
+    {
+      "type": "employee",
+      "id": "employee_50"
+    },
+    {
+      "type": "employee",
+      "id": "employee_58"
+    },
+    {
+      "type": "employee",
+      "id": "employee_40"
+    },
+    {
+      "type": "employee",
+      "id": "employee_47"
+    },
+    {
+      "type": "employee",
+      "id": "employee_19"
+    },
+    {
+      "type": "employee",
+      "id": "employee_51"
+    },
+    {
+      "type": "employee",
+      "id": "employee_66"
+    },
+    {
+      "type": "employee",
+      "id": "employee_86"
+    },
+    {
+      "type": "employee",
+      "id": "employee_90"
+    },
+    {
+      "type": "employee",
+      "id": "employee_91"
+    }
+  ]
+}

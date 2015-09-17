@@ -1,0 +1,1 @@
+ curl -X GET -H 'Authorization: Bearer 9b68a52766673eff3735ee4092dce629975f12c9fbc5fadf0e5edb917f69826a' 'https://api.contentful.com/spaces/gziz2joe16hc/content_types' > contentful_model.json

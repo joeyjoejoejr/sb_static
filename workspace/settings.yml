@@ -1,3 +1,5 @@
+access_token: 9b68a52766673eff3735ee4092dce629975f12c9fbc5fadf0e5edb917f69826a
+space_id: gziz2joe16hc
 #PATH to all data, this will create a folder in your current working directory
 data_dir: data
 
@@ -14,6 +16,9 @@ mapped:
   - :blog_categories
   - :blog_posts
   - :blog_tags
+  - :employees
+  - :roles
+  - :jobs
 
 ## MAPPING ##
 mapping_dir: data/mapping.json

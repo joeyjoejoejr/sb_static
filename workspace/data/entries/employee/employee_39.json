@@ -1,0 +1,39 @@
+{
+  "id": "employee_39",
+  "name": "Andrew Fowler",
+  "title": "QA Specialist",
+  "mugshot_uid": "2014/07/24/10/32/15/210/file",
+  "about": "<p>Hailing from the great state of Ohio, I am a UNC graduate who has had quite the diverse background. From various kitchen jobs, to a private chef of 20+, to record label positions, I've seen various workplaces; now finding tech my home. As an English major, my eye for detail plays well for my position as QA Specialist. When not at work, you can find me cooking up good eats, riding my single-speed bike, or practicing trombone to get those chops back. Not to mention, I got a music scholarship for trombone.&nbsp;</p><p>I am proud of everything that I have accomplished and I attack every challenge and project head-on. While in college, I wrote for my school's student-run newspaper and I got the chance to meet and interview comics Jason Sudeikis, Kenan Thompson, and Streeter Seidell. As you might imagine, laughs certainly followed.</p><p>I have various interests that inspire me daily. These interests include audiophile, cooking, exercise, and music performance to name a few. I'd have to say that if I ever got the chance to play with the CBS Orchestra a.k.a. “The World's Most Dangerous Band,” I would drop what I am doing and run with it.</p>",
+  "image_uid": "2014/07/15/16/47/45/355/file",
+  "slug": "andrew-fowler",
+  "email": "andrewf@smashingboxes.com",
+  "encrypted_password": "$2a$10$wkb1kzTS.FUnunr0MQSHc.BS7d9P2cnpUuuyFP.bXQ2237xYGaXb6",
+  "reset_password_token": "aKbdh2w3FjPaFXBJ5_CS",
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 8,
+  "current_sign_in_at": "2015-06-11T15:06:29+00:00",
+  "last_sign_in_at": "2015-04-09T18:24:13+00:00",
+  "current_sign_in_ip": "104.240.253.17",
+  "last_sign_in_ip": "104.240.253.17",
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-06-10T17:42:12+00:00",
+  "updated_at": "2015-06-11T15:06:29+00:00",
+  "seniority": -8388574,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 39,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_10"
+    },
+    {
+      "type": "role",
+      "id": "role_10"
+    }
+  ]
+}

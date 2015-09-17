@@ -1,0 +1,73 @@
+{
+  "id": "employee_69",
+  "name": "Brandon Mathis",
+  "title": "Lead Developer",
+  "mugshot_uid": "2014/08/25/15/06/19/600/file",
+  "about": "<p>Hi, I’m <a href=\"http://brandonmathis.me/\">Brandon</a>! Born and raised in here in Raleigh-Durham, I started tinkering with computers before I could even spell. I graduated highschool from Millbrook in Raleigh and received my degree in Computer Science from East Carolina University. North Carolina is in my blood and I’m strongly passionate about fostering a strong tech and startup community in the Triangle.</p><p>I’ve been developing web applications since 2009 and started working for Smashing Boxes in August of 2014. You can often find me at the <a href=\"http://www.meetup.com/raleighrb/\">Triangle.rb</a> or <a href=\"http://www.meetup.com/stacked/\">Stacked</a> meetups that I attend and help organize in my free time. I’m a gamer, foodie, martial-artist, film buff, and technology fanatic. My favorite video game is Metal Gear Solid, my favorite movie is Inception, and my favorite animal is the Octopus.&nbsp;</p><p><a href=\"http://brandonmathis.me/\"></a></p>",
+  "image_uid": "2014/08/25/15/06/26/468/file",
+  "slug": "brandon-mathis",
+  "email": "brandon@smashingboxes.com",
+  "encrypted_password": "$2a$10$fMTvyYXyHfVWzEmZEiAP7eou5Flw1HbRsemkRKQIECY2Or6CoKN1K",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-08-25T19:06:29+00:00",
+  "updated_at": "2015-05-07T18:25:30+00:00",
+  "seniority": -8388568,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 69,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_2"
+    },
+    {
+      "type": "role",
+      "id": "role_2"
+    }
+  ],
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_361"
+    },
+    {
+      "type": "post",
+      "id": "post_382"
+    },
+    {
+      "type": "post",
+      "id": "post_383"
+    },
+    {
+      "type": "post",
+      "id": "post_384"
+    },
+    {
+      "type": "post",
+      "id": "post_361"
+    },
+    {
+      "type": "post",
+      "id": "post_382"
+    },
+    {
+      "type": "post",
+      "id": "post_383"
+    },
+    {
+      "type": "post",
+      "id": "post_384"
+    }
+  ]
+}

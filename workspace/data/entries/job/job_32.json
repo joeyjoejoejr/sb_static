@@ -1,0 +1,13 @@
+{
+  "id": "job_32",
+  "title": "Ruby On Rails Developer",
+  "description": "<p>We’re looking for an experienced Ruby on Rails developer to crush it on a full-time basis. Your day-to-day will include building pure Rails web apps and APIs that interface with iOS, Android, and JavaScript front ends. </p><p>Our project teams are integrated – meaning you might join designers during sketch sessions or work alongside our Project Managers to help the team anticipate client needs. You’ll also take part in stand-ups, interface with clients, and mentor junior programmers, but we try to keep the meetings to a minimum. Mostly, you’ll code…and waste time on Slack. </p>",
+  "responsibilities": "",
+  "lookingFor": "<p>Your toolkit should include:</p><ul> <li>2+ years of professional development experience</li> <li>Advanced knowledge of Ruby on Rails</li> <li>Heavy experience with TDD</li> <li>Relational Database (PostgreSQL)</li> <li>Linux based systems</li> <li>HTML/CSS</li> </ul><p>And if you can tout the following, then wooo-weee!</p><ul> <li>JavaScript/CoffeeScript, and its 400+ frameworks</li> <li>Experience with Agile</li> <li>Volt/Opal</li></ul>",
+  "active": true,
+  "created_at": "2014-10-10T16:57:13+00:00",
+  "updated_at": "2015-06-16T15:31:34+00:00",
+  "submitClass": "ruby-on-rails-developer",
+  "importance": -4943743,
+  "database_id": 32
+}

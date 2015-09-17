@@ -1,0 +1,39 @@
+{
+  "id": "employee_91",
+  "name": "Jordan Hammond",
+  "title": "Back End Developer",
+  "mugshot_uid": "2015/09/10/12/56/36/926/file",
+  "about": "<p>I've been called Mr. President, Hambone, Lt. Liberty, Steve Rogers, and DJ Hamm. I have a scar on my leg from where I stabbed myself with a sword when I was nine, I own about 350 books since I hope to have my own library one day, I have a video on YouTube with 165,000 views, and I can name all 44 presidents in 44 seconds. </p><p>When I’m not treating my code to some Marvin Gaye and chardonnay, I can be found doing one of two things: </p><p>1. Re-­reading the Declaration of Independence whilst listening to Bonnie Raitt whom I will marry.</p><p>2. Coming up with sentences that use whilst and whom.</p><p>“Two chains!” ­ 2 Chainz</p>",
+  "image_uid": "2015/09/10/13/03/57/245/file",
+  "slug": "jordan-hammond",
+  "email": "jordan.hammond@smashingboxes.com",
+  "encrypted_password": "$2a$10$dzSsXvF.oaKkIcayJ2elp.Qp16fNLknuHamdbA3YVenuuc3EDJDIa",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2015-09-10T17:04:02+00:00",
+  "updated_at": "2015-09-10T17:14:59+00:00",
+  "seniority": -8388540,
+  "published": true,
+  "imageAltText": "Smashing Boxes | Jordan Hammond | Back End Developer",
+  "mugshotAltText": "Smashing Boxes | Jordan Hammond | Front End Developer",
+  "database_id": 91,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_1"
+    },
+    {
+      "type": "role",
+      "id": "role_1"
+    }
+  ]
+}

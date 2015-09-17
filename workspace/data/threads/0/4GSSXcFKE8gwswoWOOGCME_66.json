@@ -1,0 +1,39 @@
+{
+  "id": "employee_66",
+  "name": "Bret Kruse",
+  "title": "Front End Developer & Interactive Designer",
+  "mugshot_uid": "2014/08/25/14/53/40/683/file",
+  "about": "<p>I am a designer and front-end developer.</p><p>I started development in the Flash days, as a lot of people did, but made the jump about 4 years ago into the HTML/CSS/JS development world and haven't looked back. Do I miss some of the things that Flash could do? Sure, that's why I wrote my own Javascript animation class to mimic some of the animation controls of Flash but using vanilla JS: <a href=\"https://github.com/grettaface/pngy\">https://github.com/grettaface/pngy</a>.</p><p>I have been designing for about 10 years and have experience with web design, illustration, branding and print. Having both the design and development skills helps me improve my designs by being able to tweak designs based on any development hurdles or constraints along with knowing what is possible in the browser while still in the design phase.</p><p>I also have experience with 3D modeling and animation using Cinema4D.</p><p>On a personal note, I am married to my smoking hot wife and we had our first child last October. I also have a sport bike which I enjoy riding whenever possible.</p>",
+  "image_uid": "2014/08/25/14/53/51/179/file",
+  "slug": "bret-kruse",
+  "email": "bret@smashingboxes.com",
+  "encrypted_password": "$2a$10$0lPzyu2t4HEjLiRgmw2iwOwg9iLxpjq0o2Uk2SzrlvT4UmJmzHvWu",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-08-25T18:55:11+00:00",
+  "updated_at": "2015-05-20T16:27:27+00:00",
+  "seniority": -8388566,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 66,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_1"
+    },
+    {
+      "type": "role",
+      "id": "role_1"
+    }
+  ]
+}

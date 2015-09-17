@@ -1,0 +1,25 @@
+{
+  "id": "role_3",
+  "name": "Designer",
+  "created_at": "2014-06-03T20:17:58+00:00",
+  "updated_at": "2014-06-03T20:17:58+00:00",
+  "database_id": 3,
+  "employees": [
+    {
+      "type": "employee",
+      "id": "employee_45"
+    },
+    {
+      "type": "employee",
+      "id": "employee_46"
+    },
+    {
+      "type": "employee",
+      "id": "employee_75"
+    },
+    {
+      "type": "employee",
+      "id": "employee_80"
+    }
+  ]
+}

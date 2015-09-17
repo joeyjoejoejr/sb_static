@@ -1,0 +1,13 @@
+{
+  "id": "job_10",
+  "title": "Sales Engineer",
+  "description": "You’re a born problem solver in awe of technology and what it can accomplish when leveraged appropriately. You’ll fit in well here! We’re seeking a natural collaborator with strong presentation skills and a deep technical understanding to assist in the acquisition of new clients and projects. Together with our COO, you’ll meet and interface with prospective clients and then mobilize the troops internally to build estimates in a timely fashion.",
+  "responsibilities": "",
+  "lookingFor": "<ul>\r\n<li>You possess a&nbsp;strong understanding of software development processes with 3+ years of programming experience preferred</li><li>You have a past-life in&nbsp;a startup or agency/consultancy environment</li><li>You know and like to code Ruby, Javascript, Node, and possibly dabble with native iOS or Android development</li><li>You're well-versed in building estimates and project plans</li><li>You're a&nbsp;leader, team player, and go-getter</li></ul>",
+  "active": false,
+  "created_at": "2014-07-28T19:53:47+00:00",
+  "updated_at": "2014-10-13T15:50:04+00:00",
+  "submitClass": "sales-engineer",
+  "importance": 0,
+  "database_id": 10
+}

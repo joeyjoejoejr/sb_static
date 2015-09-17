@@ -1,0 +1,89 @@
+{
+  "id": "employee_46",
+  "name": "Raleigh Felton",
+  "title": "Director of Design",
+  "mugshot_uid": "2014/07/24/10/58/10/665/file",
+  "about": "<p>I am a designer with a love of smart thinking, surf culture, going against the grain, digital technology, and anything that can be turned into a sandwich.</p><p>I have a strong entrepreneurial spirit with the hopes of changing the lives of a few people, and hopefully more. I believe in giving people and clients the detail and attention that they deserve. I want the love and passion I have to shine through my work.</p><p>I have been blessed throughout my career to work with some of the best people in the industry across the country. I have been able to work on some of the top brands in the world. They include Apple, Nike, Nissan, Playstation, Lenovo, and Nationwide Insurance to name a few. I have also had the pleasure to work on start-up companies like Dognition.com, Pack Purchase, NextGlass.co and the non profit Paws 4 Ever. I even started my own brand, I AM NOW, and integrated my passions of style, design, and photography. </p><p>Some of my personal interests are surfing, music, photography, food, cooking, economics, hip-hop, snowboarding, and the beach. My favorite past time is hanging with my wife Kelsey, sons Leigh and Crew, and our little Shih-tzu, Lulu. </p>",
+  "image_uid": "2014/07/31/10/21/59/105/file",
+  "slug": "raleigh-felton",
+  "email": "raleigh@smashingboxes.com",
+  "encrypted_password": "$2a$10$nYEq6DgeCDYl7ZVlR9MUtuEEoyScAIW7dthgBvZ5cFR8.tBVLnUJi",
+  "reset_password_token": "xDkDGf6m8Jxiw74gtp5T",
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 1,
+  "current_sign_in_at": "2014-07-30T20:32:13+00:00",
+  "last_sign_in_at": "2014-07-30T20:32:13+00:00",
+  "current_sign_in_ip": "50.55.55.10",
+  "last_sign_in_ip": "50.55.55.10",
+  "failed_attempts": 1,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-06-10T17:57:25+00:00",
+  "updated_at": "2015-06-24T17:04:29+00:00",
+  "seniority": -8388587,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 46,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_3"
+    },
+    {
+      "type": "role",
+      "id": "role_7"
+    },
+    {
+      "type": "role",
+      "id": "role_3"
+    },
+    {
+      "type": "role",
+      "id": "role_7"
+    }
+  ],
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_339"
+    },
+    {
+      "type": "post",
+      "id": "post_229"
+    },
+    {
+      "type": "post",
+      "id": "post_372"
+    },
+    {
+      "type": "post",
+      "id": "post_377"
+    },
+    {
+      "type": "post",
+      "id": "post_381"
+    },
+    {
+      "type": "post",
+      "id": "post_339"
+    },
+    {
+      "type": "post",
+      "id": "post_229"
+    },
+    {
+      "type": "post",
+      "id": "post_372"
+    },
+    {
+      "type": "post",
+      "id": "post_377"
+    },
+    {
+      "type": "post",
+      "id": "post_381"
+    }
+  ]
+}

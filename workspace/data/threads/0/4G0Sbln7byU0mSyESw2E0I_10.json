@@ -1,0 +1,17 @@
+{
+  "id": "role_10",
+  "name": "Quality Assurance",
+  "created_at": "2014-06-03T20:17:58+00:00",
+  "updated_at": "2014-06-03T20:17:58+00:00",
+  "database_id": 10,
+  "employees": [
+    {
+      "type": "employee",
+      "id": "employee_39"
+    },
+    {
+      "type": "employee",
+      "id": "employee_78"
+    }
+  ]
+}

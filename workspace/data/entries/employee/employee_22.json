@@ -1,0 +1,89 @@
+{
+  "id": "employee_22",
+  "name": "Biko Tushinde",
+  "title": "Senior Front End Engineer",
+  "mugshot_uid": "2014/07/24/10/33/22/164/file",
+  "about": "<p>I am a creative thinker and problem solver interested in creating flawless experiences for human beings. I enjoy converting information into understanding by any means necessary. I think in systems, I speak in technical jargon, and most of my dreams are namespaced. My ideas are modular; maintainable; scalable. I'm going to visualize all of the data. I'm here to build things.</p><p>My computer science coursework at N.C. State exposed me to low-level concepts and gave me the tools to reason about computer systems. During that time I was managing editor of the student paper, a DJ on the student radio station and webmaster/admin to countless experiments, freelance projects and hacks. Since then I have been in deep meditation in a remote mountain stronghold, studying the ways of the DOM and waiting for HTTP/2.</p><p>I'm deeply interested in music and instruments from all corners. I build and ride longboards when the weather is nice. I can't whistle but I once bearded an opponent to death.</p>",
+  "image_uid": "2014/07/15/16/58/49/760/file",
+  "slug": "biko-tushinde",
+  "email": "biko@smashingboxes.com",
+  "encrypted_password": "",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-06-04T13:58:54+00:00",
+  "updated_at": "2015-02-17T17:14:53+00:00",
+  "seniority": -8388569,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 22,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_1"
+    },
+    {
+      "type": "role",
+      "id": "role_7"
+    },
+    {
+      "type": "role",
+      "id": "role_1"
+    },
+    {
+      "type": "role",
+      "id": "role_7"
+    }
+  ],
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_263"
+    },
+    {
+      "type": "post",
+      "id": "post_291"
+    },
+    {
+      "type": "post",
+      "id": "post_308"
+    },
+    {
+      "type": "post",
+      "id": "post_297"
+    },
+    {
+      "type": "post",
+      "id": "post_246"
+    },
+    {
+      "type": "post",
+      "id": "post_263"
+    },
+    {
+      "type": "post",
+      "id": "post_291"
+    },
+    {
+      "type": "post",
+      "id": "post_308"
+    },
+    {
+      "type": "post",
+      "id": "post_297"
+    },
+    {
+      "type": "post",
+      "id": "post_246"
+    }
+  ]
+}

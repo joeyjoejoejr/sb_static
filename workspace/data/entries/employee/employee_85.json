@@ -1,0 +1,49 @@
+{
+  "id": "employee_85",
+  "name": "Hillary Pitts",
+  "title": "Digital Strategist",
+  "mugshot_uid": "2015/08/14/15/46/48/610/file",
+  "about": "<p>I am a growth strategist focused on using data-driven insights to make informed decisions. Before I got my start at Smashing Boxes, I was a \"mad woman\" working in the wonderful world of digital advertising on global brands such as Aveda and Cree LED Lighting. In a past life, I was a kick boxer and junior firefighter. When I'm not at the office, you can find me reading, cooking, or traveling (or - more likely - spending time with my three-legged cat).  </p>",
+  "image_uid": "2015/08/14/15/46/54/272/file",
+  "slug": "hillary-pitts",
+  "email": "hillary@smashingboxes.com",
+  "encrypted_password": "$2a$10$I4cUZgzdv4j5znFwogEqwO8PKtWro2kU/rpmOALy2L2TGN6BCkrpa",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2015-08-14T19:47:35+00:00",
+  "updated_at": "2015-08-28T19:36:29+00:00",
+  "seniority": -8388549,
+  "published": true,
+  "imageAltText": "Hillary Pitts | Smashing Boxes | Digital Strategist",
+  "mugshotAltText": "Hillary Pitts | Smashing Boxes | Digital Strategist",
+  "database_id": 85,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_4"
+    },
+    {
+      "type": "role",
+      "id": "role_4"
+    }
+  ],
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_388"
+    },
+    {
+      "type": "post",
+      "id": "post_388"
+    }
+  ]
+}

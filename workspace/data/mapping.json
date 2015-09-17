@@ -3,8 +3,8 @@
     "content_type": "Category",
     "type": "entry",
     "fields": {
-      "name": "Name",
-      "slug": "Slug"
+      "name": "name",
+      "slug": "slug"
     },
     "links": {
       "many": [{
@@ -18,12 +18,12 @@
     "content_type": "Post",
     "type": "entry",
     "fields": {
-      "title": "Title",
-      "summary": "Summary",
-      "body": "Body",
-      "slug": "Slug",
-      "published_at": "Published",
-      "author_name": "Authorname"
+      "title": "title",
+      "summary": "summary",
+      "body": "body",
+      "slug": "slug",
+      "published_at": "published",
+      "author_name": "authorName"
     },
     "links": {
       "belongs_to": [{
@@ -36,6 +36,12 @@
         "primary_id": "post_id",
         "foreign_id": "tag_id",
         "through": "blog_taggings"
+      },
+      {
+        "relation_to": "Employees",
+        "primary_id": "post_id",
+        "foreign_id": "employee_id",
+        "through": "post_authors"
       }]
     }
   },
@@ -44,8 +50,8 @@
     "content_type": "Tag",
     "type": "entry",
     "fields": {
-      "name": "Name",
-      "slug": "Slug"
+      "name": "name",
+      "slug": "slug"
     },
     "links": {
       "many_through": [{
@@ -55,5 +61,64 @@
         "through": "blog_taggings"
       }]
     }
+  },
+
+  "Employees": {
+    "content_type": "Employee",
+    "type": "entry",
+    "fields": {
+      "name": "name",
+      "title": "title",
+      "about": "about",
+      "slug": "slug",
+      "email": "email",
+      "seniority": "seniority",
+      "published": "published",
+      "image_alt_text": "imageAltText",
+      "mugshot_alt_text": "mugshotAltText"
+    },
+    "links": {
+      "many_through": [{
+        "relation_to": "Roles",
+        "primary_id": "employee_id",
+        "foreign_id": "role_id",
+        "through": "employees_roles"
+      },
+      {
+        "relation_to": "BlogPosts",
+        "primary_id": "employee_id",
+        "foreign_id": "post_id",
+        "through": "post_authors"
+      }]
+    }
+  },
+
+  "Roles": {
+    "content_type": "Role",
+    "type": "entry",
+    "fields": { "name": "name" },
+    "links": {
+      "many_through": [{
+        "relation_to": "Employees",
+        "primary_id": "role_id",
+        "foreign_id": "employee_id",
+        "through": "employees_roles"
+      }]
+    }
+  },
+
+  "Jobs": {
+    "content_type": "Job",
+    "type": "entry",
+    "fields": { 
+      "title": "title",
+      "description": "description",
+      "responsabilities": "responsibilities",
+      "looking_for": "lookingFor",
+      "active": "active",
+      "submit_class": "submitClass",
+      "importance": "importance"
+    },
+    "links": {}
   }
 }

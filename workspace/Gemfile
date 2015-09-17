@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
 
 gem "database-exporter"
+gem "contentful-importer"
+gem "reverse_markdown"

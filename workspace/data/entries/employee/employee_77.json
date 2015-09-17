@@ -1,0 +1,39 @@
+{
+  "id": "employee_77",
+  "name": "Brian Kessman",
+  "title": "VP of Product ",
+  "mugshot_uid": "2015/01/20/10/06/54/434/file",
+  "about": "<p>As VP of Product, I ensure our teams design and deliver products, services, and platforms that transform our clients’ businesses and create remarkable experiences for their customers. My day-to-day includes consulting with clients and guiding our product directors, project managers, UX/UI designers, growth engineers and developers in their collaboration and delivery.</p><p>Before joining Smashing Boxes, I held leadership positions with advertising, brand strategy, management consulting, and IT firms. Through this experience I’ve directed and managed some exciting large-scale digital projects for brands such as Nationwide Insurance, Travelocity, Lenovo, Burger King, California Pizza Kitchen, <a href=\"http://cars.com/\">Cars.com</a>, HP, HBO, NBC, USA Networks, UFC, and the San Diego Zoo.</p><p>I’m originally from the New York area where I met my beautiful wife, Jacqueline. Together we gave Los Angeles a try for a few years, but we eventually found our home in Chapel Hill.</p><p>When not at the office you can find me hanging out with my 5-year-old twin girls, Norah and Abigail, and my 9-month-old son Bennett.</p>",
+  "image_uid": "2015/01/20/16/41/01/677/file",
+  "slug": "brian-kessman",
+  "email": "briank@smashingboxes.com",
+  "encrypted_password": "$2a$10$5D64DVNclkoEW2lpHVoYSetK.qAfLqwJwyp6D2kCQm8uNOvQflwdO",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2015-01-20T15:06:56+00:00",
+  "updated_at": "2015-06-12T15:34:53+00:00",
+  "seniority": -8388600,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 77,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_9"
+    },
+    {
+      "type": "role",
+      "id": "role_9"
+    }
+  ]
+}

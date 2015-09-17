@@ -1,0 +1,65 @@
+{
+  "id": "employee_21",
+  "name": "Nick Jordan",
+  "title": "Co-Founder & CEO",
+  "mugshot_uid": "2014/07/24/10/50/48/45/file",
+  "about": "<p>I think BIG picture. Big ideas, big impact, big assumptions, big challenges, big risks, big results. If you aren't extremely excited, passionate, energized and burning the ships about your idea, you need to move on because it's already dead. I am going to push the boundaries at all times because being comfortable is being stagnant. Incremental does not exist in my vocabulary, exponential does. I will never be incrementally better for our staff, our clients, or our community, that's a box. I'm&nbsp;smashing boxes.&nbsp;</p><p>Yesterday does not pay today's bills and it does not provide tomorrow's growth and revenue strategy. Every day we prove to our clients that we are worthy of earning their business. I am proud of all of my work history and projects. I have two undergraduate degrees from UNC Chapel Hill (BSBA, BA-Economics). I have never worked for a digital (or other) agency – all of my experience is first hand. I have worked on product strategy and business development for massively successful companies like Bloomberg LP, all the way down to my solo-preneur effort FTE Source – a resource sharing model for healthcare that I sold to hospitals. So software, product strategy, and business development are my pride and joy.&nbsp;</p><p>I am simple. I have two modes – work, and home. Work is tough, but home is tougher. My wife Emily and I have Mason (almost three years old) and Oliver (three months old), a house, a yard, and&nbsp;a slew of animals. </p>",
+  "image_uid": "2014/07/15/17/59/51/415/file",
+  "slug": "nick-jordan",
+  "email": "nick@smashingboxes.com",
+  "encrypted_password": "",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 4,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-06-04T13:58:48+00:00",
+  "updated_at": "2014-12-12T17:34:11+00:00",
+  "seniority": -8388604,
+  "published": true,
+  "imageAltText": null,
+  "mugshotAltText": null,
+  "database_id": 21,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_6"
+    },
+    {
+      "type": "role",
+      "id": "role_6"
+    }
+  ],
+  "posts": [
+    {
+      "type": "post",
+      "id": "post_293"
+    },
+    {
+      "type": "post",
+      "id": "post_260"
+    },
+    {
+      "type": "post",
+      "id": "post_370"
+    },
+    {
+      "type": "post",
+      "id": "post_293"
+    },
+    {
+      "type": "post",
+      "id": "post_260"
+    },
+    {
+      "type": "post",
+      "id": "post_370"
+    }
+  ]
+}

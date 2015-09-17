@@ -1,0 +1,39 @@
+{
+  "id": "employee_92",
+  "name": "Joan Yabani ",
+  "title": "Team Coordinator",
+  "mugshot_uid": "2015/09/10/13/08/34/412/file",
+  "about": "<p>Hailing from Accra, Ghana, I started my life in the Czech republic and grew up in Wake Forest, NC.</p><p>People are my passion, and improving the lives of those I come in contact with and around the world is my life's dream. I originally majored in Political Science and International Relations, but came to the realization that I could do more damage in Business. I consider myself the love child of strategy and creativity. Whether on a small or large scale, I love being a part of the process. Constantly looking for ways to improve and contribute.</p><p>In my free time i'm a personal trainer, foodie to the max, dance party enthusiast, Jesus lover, adventure seeker, and a firm believer that a nap a day, keeps the doctor away. </p>",
+  "image_uid": "2015/09/10/13/11/25/757/file",
+  "slug": "joan-yabani",
+  "email": "joan@smashingboxes.com",
+  "encrypted_password": "$2a$10$Tyfor.8mMq7zdggPZvD2c.6Lw/6omo59hTuv7Fngvh0HzAMuNCYAa",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 0,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2015-09-10T17:11:27+00:00",
+  "updated_at": "2015-09-10T17:12:16+00:00",
+  "seniority": -8388544,
+  "published": true,
+  "imageAltText": "Smashing Boxes | Joan Yabani | Front End Developer",
+  "mugshotAltText": "Smashing Boxes | Joan Yabani | Front End Developer",
+  "database_id": 92,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_6"
+    },
+    {
+      "type": "role",
+      "id": "role_6"
+    }
+  ]
+}

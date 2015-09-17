@@ -1,0 +1,39 @@
+{
+  "id": "employee_61",
+  "name": "Lauren Hogge",
+  "title": "HR Specialist",
+  "mugshot_uid": "2014/07/24/10/46/39/906/file",
+  "about": "<p>I love HR - because I love people. Humans are a company's greatest resource. I believe each person is unique and different. I am passionate about learning and understanding from a cultural perspective how to inspire and engage employees.</p><p>Prior to joining Smashing Boxes, I was a character at Disney World, an intern with USA TODAY and an employee engagement consultant with a company called The Fun Dept. I believe that great vision without great people is irrelevant.</p><p>I enjoy hiking, thrifting, enjoying familiar places and exploring new places, yoga, eating delicious healthy foods, and pick-up soccer games. I am also really proud of my handshake.</p>",
+  "image_uid": "2014/07/15/17/53/33/832/file",
+  "slug": "lauren-hogge",
+  "email": "lauren@smashingboxes.com",
+  "encrypted_password": "$2a$10$I0JkpI4d.LZf5nyLViNX4ucoZcBBxC4/gNElMNnrbn9HRqBIra3Q6",
+  "reset_password_token": null,
+  "reset_password_sent_at": null,
+  "remember_created_at": null,
+  "sign_in_count": 0,
+  "current_sign_in_at": null,
+  "last_sign_in_at": null,
+  "current_sign_in_ip": null,
+  "last_sign_in_ip": null,
+  "failed_attempts": 1,
+  "unlock_token": null,
+  "locked_at": null,
+  "created_at": "2014-07-01T18:50:18+00:00",
+  "updated_at": "2015-07-02T20:40:30+00:00",
+  "seniority": -8388521,
+  "published": true,
+  "imageAltText": "",
+  "mugshotAltText": "",
+  "database_id": 61,
+  "roles": [
+    {
+      "type": "role",
+      "id": "role_6"
+    },
+    {
+      "type": "role",
+      "id": "role_6"
+    }
+  ]
+}

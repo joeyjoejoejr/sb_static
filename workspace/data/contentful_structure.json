@@ -1,38 +1,4 @@
 {
-  "Employee": {
-    "id": "4GSSXcFKE8gwswoWOOGCME",
-    "name": "Employee",
-    "description": "",
-    "displayField": "title",
-    "fields": {
-      "name": "Symbol",
-      "title": "Symbol",
-      "Mugshot": {
-        "id": "mugshot",
-        "type": "Asset",
-        "link": "Link"
-      },
-      "about": "Text",
-      "slug": "Symbol",
-      "email": "Symbol",
-      "seniority": "Integer",
-      "published": "Boolean",
-      "imageAltText": "Symbol",
-      "mugshotAltText": "Symbol",
-      "Roles": {
-        "id": "roles",
-        "type": "Array",
-        "link_type": "Entry",
-        "link": "Link"
-      },
-      "Posts": {
-        "id": "posts",
-        "type": "Array",
-        "link_type": "Entry",
-        "link": "Link"
-      }
-    }
-  },
   "Job": {
     "id": "1d0RLbTvU06yA2mG4CGu4W",
     "name": "Job",
@@ -55,7 +21,7 @@
     "displayField": "name",
     "fields": {
       "name": "Symbol",
-      "Employees": {
+      "Employee": {
         "id": "employees",
         "type": "Array",
         "link_type": "Entry",
@@ -74,6 +40,56 @@
       "Image": {
         "id": "image",
         "type": "Asset",
+        "link": "Link"
+      },
+      "Post": {
+        "id": "posts",
+        "type": "Array",
+        "link_type": "Entry",
+        "link": "Link"
+      }
+    }
+  },
+  "Tag": {
+    "id": "29QhMIKLywimmqcoYmQ88u",
+    "name": "Tag",
+    "description": "",
+    "displayField": "name",
+    "fields": {
+      "name": "Symbol",
+      "slug": "Symbol",
+      "Post": {
+        "id": "posts",
+        "type": "Array",
+        "link_type": "Entry",
+        "link": "Link"
+      }
+    }
+  },
+  "Employee": {
+    "id": "4GSSXcFKE8gwswoWOOGCME",
+    "name": "Employee",
+    "description": "",
+    "displayField": "title",
+    "fields": {
+      "name": "Symbol",
+      "title": "Symbol",
+      "Mugshot": {
+        "id": "mugshot",
+        "type": "Asset",
+        "link": "Link"
+      },
+      "about": "Text",
+      "slug": "Symbol",
+      "email": "Symbol",
+      "seniority": "Integer",
+      "published": "Boolean",
+      "imageAltText": "Symbol",
+      "mugshotAltText": "Symbol",
+      "Role": {
+        "id": "roles",
+        "type": "Array",
+        "link_type": "Entry",
         "link": "Link"
       },
       "Post": {
@@ -114,24 +130,8 @@
         "link": "Link"
       },
       "featured": "Boolean",
-      "Authors": {
+      "Employee": {
         "id": "authors",
-        "type": "Array",
-        "link_type": "Entry",
-        "link": "Link"
-      }
-    }
-  },
-  "Tag": {
-    "id": "29QhMIKLywimmqcoYmQ88u",
-    "name": "Tag",
-    "description": "",
-    "displayField": "name",
-    "fields": {
-      "name": "Symbol",
-      "slug": "Symbol",
-      "Post": {
-        "id": "posts",
         "type": "Array",
         "link_type": "Entry",
         "link": "Link"
