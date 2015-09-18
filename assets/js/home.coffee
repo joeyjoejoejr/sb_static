@@ -1,4 +1,10 @@
 $(document).on "ready page:load", ->
+  $.getJSON "http://api.dribbble.com/players/smashingboxes/shots?callback=?"
+    .done (data) ->
+      shots = data.shots.slice 0, 3
+      for shot in shots
+        $("#dribbble-container ul").append "<li class=\"item\"><a href=#{shot.url} target=\"_blank\"><img src=\"#{shot.image_url}\"></a></li>"
+
   windowsize = $(this).width()
   if windowsize > 640
     $(".services").waypoint ((direction) ->

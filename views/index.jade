@@ -74,52 +74,21 @@ block content
 
   section
     #home-carousel.carousel.js-slider
-      // - @featured_blog_posts.each_with_index do |post, i|
-      //   - next unless post.image.present?
-      //   .slide
-      //     .slide-image-wrapper
-      //       .overlay
-      //       - if i == 0
-      //         = dragonfly_image_tag(post.image, class: 'background')
-      //       - else
-      //         img data-src=post.image.url class="owl-lazy background" 
-      //     .slide-container
-      //       .large-7.small-16.columns.small-centered
-      //         h2.blog-title = post.title
-      //         = link_to idea_path(post), class: 'button blog-button' do
-      //           | See Our Latest Idea
+      each post in contentful.featured_blog_posts
+        .slide
+          .slide-image-wrapper
+            .overlay
+            img.background.owl-lazy(data-src!=asset(post.image))
+          .slide-container
+            .large-7.small-16.columns.small-centered
+              h2.blog-title= post.title
+              a.button.blog-button(href="#") See Out Latest Idea
 
   section.section-white.social
     .row.columns.small-centered
-      // - if @shots.present?
-      //   #dribbble-container
-      //     .content-header.centered
-      //       h5 Dribbble
-      //     hr
-      //     .post
-      //       ul.large-block-grid-3.medium-block-grid-2.small-block-grid-1
-      //         - @shots.each do |shot|
-      //           li.item
-      //             a href=shot[:url] target="_blank"
-      //               = image_tag shot[:image]
-
-      // - if @instagram_media.present?
-      //   #instagram-container
-      //     .content-header.centered
-      //       h5 Instagram
-      //     hr
-      //     .post
-      //       ul.large-block-grid-4.medium-block-grid-2.small-block-grid-1
-      //         - @instagram_media.each do |media|
-      //           li.item
-      //             a href=media[:url] target="_blank"
-      //               = image_tag media[:image]
-  // Once you've added a content type and posts into Contentful
-  // go update your app.coffee config and then test out iterating
-  // over your content type here!
-
-  //- ul
-    //- - for post in contentful.posts
-      //- li
-        //- h4= post.title
-        //- != marked(post.body)
+      #dribbble-container
+        .content-header.centered
+          h5 Dribbble
+        hr
+        .post
+          ul.large-block-grid-3.medium-block-grid-2.small-block-grid-1

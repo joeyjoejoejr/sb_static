@@ -30,13 +30,11 @@ html
             i.icon-sb-mark.hidden
             span Smashing Boxes
 
-          // ul.menu.hidden
-          //   = nested_pages do |page, subpages|
-          //     li class="menu-#{page.identifier}"
-          //       - if page.in_menu? && page.identifier != 'home' && page.identifier != 'news-slash-events'
-          //         = link_to content_tag(:span, page.title, :'data-title' => "#{page.title}"), page.url,  :class => "dr-icon"
-          //         - if subpages
-          //           ul= subpages
+          ul.menu.hidden
+            each page in ["culture", "work", "ideas", "jobs", "contact"]
+              li(class="menu-#{page}")
+                a.dr-icon(href="/#{page}")
+                  span("data-title"=page) #{page}
 
     block content
 

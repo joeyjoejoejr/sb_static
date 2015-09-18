@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require "reverse_markdown"
-
-file_names = Dir["*"]
-
-file_names.each do
-end
