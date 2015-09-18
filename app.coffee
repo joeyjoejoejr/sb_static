@@ -1,3 +1,5 @@
+require('dotenv').load()
+
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'

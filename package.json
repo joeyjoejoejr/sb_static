@@ -3,6 +3,7 @@
   "description": "SB.com Static Site",
   "dependencies": {
     "coffee-script": "1.9.x",
+    "dotenv": "^1.2.0",
     "foundation-sites": "^5.5.2",
     "jade": "1.9.x",
     "jquery": "^2.1.4",
