@@ -1,0 +1,80 @@
+extends layout
+
+block content
+  section.section-pink.culture-header
+    .blur-img
+      div(style="background-image: url('/img/sb-disruption_lg.jpg');")
+      .blur
+
+  section
+    #culture-carousel.carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/culture/culture_sb.jpg')
+        .slide-container
+          .row
+            .large-10.columns.small-centered.large-centered.medium-12
+              img.logomark(src='/img/culture/logomark.png', size='86x98')
+              h5.title &#8220;We can’t help it, we’re disruptive by nature&#8221;
+              p We are all about ideas, disruption, innovation, and pushing technology boundaries daily. The box is a classic archetype that represents a dilemma in people’s thinking. It is a constraint, yet it is also an opportunity. You don’t have to stay in a box, and you don’t have to necessarily think “outside of the box”. When there IS NO BOX, you are free to build the solution that best meets your needs with no restrictions.
+      // - for slide in current_page.get("quote_slideshow")
+      //   .slide
+      //     .slide-image-wrapper
+      //       = image_tag(slide.attr('image').url, class: 'background')
+
+  section.section-white.people-quote
+    .row
+      .large-15.columns.small-centered
+        .large-8.columns
+          h3 Our People
+          p We are not mercenaries. We are a select group of entrepreneurs, thought leaders, and craftsmen.
+        .large-5.columns.quote
+          p
+            i.icon-sb-open-quotes.quote-mark
+            span
+            | Everyone I know who is <strong>happy</strong> is working well at something they consider important.
+            i.icon-sb-closed-quotes.quote-mark
+          p.author Abraham Maslow
+
+  section.section-white.people
+    ul
+      // - cache cache_key_for_employees do
+      //   - @employees.each do |employee|
+      //     - cache(employee) do
+      //       li
+      //         .overlay
+      //           .info id=employee.slug
+      //             .title
+      //               = employee.title
+      //             .name
+      //               = employee.name
+      //             = link_to "See more", bio_path(employee)
+      //         - if employee.mugshot
+      //           = dragonfly_image_tag employee.mugshot, size: "225x225#", alt: employee.mugshot_alt_text
+
+  section
+    #culture-carousel-bottom.carousel.js-slider
+      .slide.slide-pink
+        .slide-image-wrapper
+        .slide-container
+          .row
+            .large-9.columns.small-centered.large-centered.medium-12
+              img.logomark(src="/img/culture/slider_logo.png", size="86x98")
+              p We bring ideas to life, we help others realize their dreams and their goals, and we help push innovative companies to heights they aren’t able to reach on their own.
+      // - for slide in current_page.get("culture_slideshow")
+      //   .slide
+      //     .slide-image-wrapper
+      //       = image_tag(slide.attr('image').url, class: 'background')
+      .slide.slide-pink
+        .slide-image-wrapper
+        .slide-container
+          .row
+            .large-9.columns.small-centered.large-centered.medium-12
+              img.logomark(src="/img/culture/slider_logo.png", size="86x98")
+              p We work here because our contributions build businesses and make companies better, helping them disrupt industries, save lives, create jobs, and improve the world. This is both fun and rewarding.
+
+  section.section-grey.hiring
+    .row.centered
+      h3 Disruptive by nature?
+      a.button(href='/jobs') We're Hiring
+
