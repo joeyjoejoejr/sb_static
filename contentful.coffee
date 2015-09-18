@@ -2,7 +2,14 @@ module.exports =
   access_token: process.env.C_ACCESS_TOKEN
   management_token: process.env.C_MANAGE_TOKEN
   space_id: process.env.C_SPACE_ID
-  content_types: {}                   # remove these object braces once the config below is filled out
+  content_types:
+    featured_case_studies:
+      id: '4Sb5UN4GG486eOOcC6KASE'
+      filters: "fields.featured": true
+
+    featured_blog_posts:
+      id: '5EQ8hTcdVe0C0OayyGcQ0E'
+      filters: "fields.featured": true
     # posts:                          # data will be made available through this key on the `contentful` object in your templates
     #   id: 'xxxx'                    # ID of your content type
     #   filters: {}                   # passes filters to the call to contentful's API, see contentful's docs for more info

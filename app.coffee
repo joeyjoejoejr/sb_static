@@ -21,3 +21,6 @@ module.exports =
     contentful(config)
     browserify(files: 'assets/js/application.coffee', out: 'js/build.js')
   ]
+
+  server:
+    clean_urls: true
