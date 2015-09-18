@@ -17,10 +17,10 @@ block content
               img.logomark(src='/img/culture/logomark.png', size='86x98')
               h5.title &#8220;We can’t help it, we’re disruptive by nature&#8221;
               p We are all about ideas, disruption, innovation, and pushing technology boundaries daily. The box is a classic archetype that represents a dilemma in people’s thinking. It is a constraint, yet it is also an opportunity. You don’t have to stay in a box, and you don’t have to necessarily think “outside of the box”. When there IS NO BOX, you are free to build the solution that best meets your needs with no restrictions.
-      // - for slide in current_page.get("quote_slideshow")
-      //   .slide
-      //     .slide-image-wrapper
-      //       = image_tag(slide.attr('image').url, class: 'background')
+      each slide in contentful.quote_slideshow[0].image
+        .slide
+          .slide-image-wrapper
+            img.background(src=asset(slide))
 
   section.section-white.people-quote
     .row
@@ -56,17 +56,21 @@ block content
     #culture-carousel-bottom.carousel.js-slider
       .slide.slide-pink
         .slide-image-wrapper
+          // TODO: Hack to make the slide the coreect height
+          img.background(src=asset(contentful.culture_slideshow[0].image[0]))
         .slide-container
           .row
             .large-9.columns.small-centered.large-centered.medium-12
               img.logomark(src="/img/culture/slider_logo.png", size="86x98")
               p We bring ideas to life, we help others realize their dreams and their goals, and we help push innovative companies to heights they aren’t able to reach on their own.
-      // - for slide in current_page.get("culture_slideshow")
-      //   .slide
-      //     .slide-image-wrapper
-      //       = image_tag(slide.attr('image').url, class: 'background')
+      each slide in contentful.culture_slideshow[0].image
+        .slide
+          .slide-image-wrapper
+            img.background(src=asset(slide))
       .slide.slide-pink
         .slide-image-wrapper
+          // TODO: Hack to make the slide the coreect height
+          img.background(src=asset(contentful.culture_slideshow[0].image[0]))
         .slide-container
           .row
             .large-9.columns.small-centered.large-centered.medium-12
