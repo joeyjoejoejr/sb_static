@@ -1,0 +1,68 @@
+extends layout
+
+// - content_for :seo do
+//   title Smashing Boxes | #{@employee.name}
+block content
+  section.section-pink.employee-overview
+    .blur-img
+      div(style='background-image: url(#{asset(entry.image)});')
+      .blur
+
+    .image-gradient
+    .large-12.columns.centered.main.small-centered
+      .mugshot
+        img(src=asset(entry.mugshot, { w: 200, h: 200 }), alt=entry.mugshot_alt_text)
+      h3= entry.name
+      h6= entry.title
+
+  -
+    var index = contentful.employees.indexOf(entry),
+      prev_employee = contentful.employees[index - 1],
+      next_employee = contentful.employees[index + 1];
+
+
+  section.section-white.employee-select
+    .row
+      .large-12.columns.centered.next-prev.small-centered
+        ul
+          if index >= 0 && prev_employee
+            li
+              a.prev(href=prev_employee._url)
+                i.image-prev.icon-sb-prev
+                = prev_employee.name
+          else
+            li
+              i.image-prev.disabled.icon-sb-prev
+              span None
+          li.close
+            a.image-close(href="/culture#" + entry._url)
+              i.image-close.icon-sb-close
+              span Close
+          if next_employee
+            li
+              a.next(href=next_employee._url)
+                = next_employee.name
+                i.image-next.icon-sb-next
+          else
+            li
+              span None
+              i.image-next.disabled.icon-sb-next
+
+  section.section-white.employee-bio
+    .row
+      .large-12.columns.main.small-centered
+        .about
+          h3 About
+          !=marked(entry.about)
+
+  if entry.posts && entry.posts.length > 0
+    section.section-grey.ideas-other
+      .row
+        .large-12.columns.small-centered.main
+          h4 Ideas
+          ul
+            each post in entry.posts
+              if post.fields && post.fields.title
+                li
+                  a(href="#")
+                    =trunc(post.fields.title, { "length": 40, "separator": " " })

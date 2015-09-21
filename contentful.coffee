@@ -1,4 +1,6 @@
-module.exports = 
+S = require "string"
+
+module.exports =
   access_token: process.env.C_ACCESS_TOKEN
   management_token: process.env.C_MANAGE_TOKEN
   space_id: process.env.C_SPACE_ID
@@ -18,6 +20,15 @@ module.exports =
     culture_slideshow:
       id: "2tTMTlaVv6ocQcaC2IQQ8m"
       filters: "fields.title": "culture_slideshow"
+
+    employees:
+      id: "4GSSXcFKE8gwswoWOOGCME"
+      filters: "order": "fields.seniority"
+      template: 'views/_bio.jade'
+      path: (employee) -> "bio/#{S(employee.name).slugify().s}"
+
+    posts:
+      id: '5EQ8hTcdVe0C0OayyGcQ0E'
     # posts:                          # data will be made available through this key on the `contentful` object in your templates
     #   id: 'xxxx'                    # ID of your content type
     #   filters: {}                   # passes filters to the call to contentful's API, see contentful's docs for more info

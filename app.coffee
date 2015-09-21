@@ -4,6 +4,7 @@ contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
 browserify   = require 'roots-browserify'
+lodash       = require 'lodash'
 
 module.exports =
   ignores: [
@@ -16,6 +17,7 @@ module.exports =
 
   locals:
     marked: marked
+    trunc: lodash.trunc
 
   extensions: [
     contentful(config)

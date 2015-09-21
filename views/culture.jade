@@ -38,19 +38,14 @@ block content
 
   section.section-white.people
     ul
-      // - cache cache_key_for_employees do
-      //   - @employees.each do |employee|
-      //     - cache(employee) do
-      //       li
-      //         .overlay
-      //           .info id=employee.slug
-      //             .title
-      //               = employee.title
-      //             .name
-      //               = employee.name
-      //             = link_to "See more", bio_path(employee)
-      //         - if employee.mugshot
-      //           = dragonfly_image_tag employee.mugshot, size: "225x225#", alt: employee.mugshot_alt_text
+      each employee in contentful.employees
+        li
+          .overlay
+            .info(id=employee._url)
+              .title= employee.title
+              .name= employee.name
+              a(href=employee._url) See more
+          img(src=asset(employee.mugshot, { w: 225, h: 225 }), alt=employee.mugshot_alt_text)
 
   section
     #culture-carousel-bottom.carousel.js-slider
