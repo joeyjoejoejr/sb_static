@@ -4,6 +4,7 @@
     next_case_study = contentful.case_studies[index + 1];
 
   next_case_study = next_case_study || contentful.case_studies[0];
+  prev_case_study = prev_case_study || contentful.case_studies.slice(-1)[0];
 
 section.section-white.more-work
   .row.centered

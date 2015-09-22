@@ -1,0 +1,88 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "Farm Bureau";
+    })[0]
+
+  section.section-grey.case-study-header(style="background-image: url('/img/work/case-studies/FarmBureau/header.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 100%;")
+    .large-13.columns.centered.main.small-centered
+      h1 Farm Bureau
+      h5 HOW FARM BUREAU IS SETTING AN INDUSTRY STANDARD FOR CUSTOMER SERVICE
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/case-studies/FarmBureau/logo.png")
+      .case-study-description NC Farm Bureau Mutual Insurance Company recognized that building an app wasn't about innovating - or even about business goals. It was about providing the best experience for their customers.
+
+      a.button.app(href="https://appsto.re/us/hp0P5.i") Get the ios App
+      a.button.app(href="https://play.google.com/store/apps/details?id=com.ncfbins.android") Get the Android App
+
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/FarmBureau/process1.png')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/FarmBureau/process2.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.small-centered
+      .large-16.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span NC Farm Bureau values their customers above all else. When clients put customers first, the path forward becomes simple and focused.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          | Lucas Brauer, 
+          span.title User Experience Designer
+
+  section.section-white.theme-block-3
+    .row.large-15.columns.main.small-centered
+      h5.centered A CUSTOMER FIRST APPROACH
+      .large-16.columns
+        p NC Farm Bureau built its business around putting customers first. The security that comes from knowing an agent is there to help is especially important during big life moments, like buying a new car or after an accident - sometimes at odd hours when an agent may not be available. NC Farm Bureau needed a better tool to serve customers when and where they need help - and a partner who could deliver.
+
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/FarmBureau/android.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/FarmBureau/ios.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/FarmBureau/icons.jpg')
+
+  section.section-white.theme-block-4
+    .row.large-15.columns.small-centered
+      h5.centered CHOOSING THE RIGHT TECHNOLOGY, TOGETHER
+
+      .large-16.columns
+        p Trusting our collaborative approach, NC Farm Bureau encouraged us to be their advisers and partners through each step of the design and development process. From helping them focus their goals, to choosing native iOS and Android over PhoneGap. As a result, the app’s design was tailored to the unique conventions of each platform from the beginning - ensuring optimal usability and speed, and quicker time to market. 
+        p These decisions position NC Farm Bureau to be adaptable as needs change in the future, knowing that the customer experience won’t be compromised.
+
+
+
+  section.section-white.theme-block-5
+    .row.large-15.columns.small-centered
+      .large-16.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span We chose Smashing Boxes because we liked their enthusiasm and felt that they possessed the creativity that we wanted to see in our new app. In the end, we made the right decision. The creativity shown by Smashing Boxes - particularly during the user experience and design workshops - was very beneficial. We appreciated their collaborative design approach.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          | NC Farm Bureau Mutual Insurance Company
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_farm_bureau"

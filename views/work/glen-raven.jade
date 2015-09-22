@@ -1,0 +1,102 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "Glen Raven";
+    })[0]
+
+  section.section-grey.case-study-header(style="background-image: url('/img/work/case-studies/GlenRaven/glen_raven_header.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 100%;")
+    video.case-study-video(autoplay="", loop=true, autobuffer=true, poster="/img/work/case-studies/GlenRaven/glen_raven_header.jpg")
+      source(src="/videos/work/case-studies/GlenRaven/GR.webm", type="video/webm")
+      source(src="/videos/work/case-studies/GlenRaven/GR.mp4", type="video/mp4")
+
+    .large-12.columns.centered.main.small-centered
+      h1= case_study.headerTitle
+      h5= case_study.headerSubtitle
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/case-studies/GlenRaven/glenraven_logo.png")
+      .case-study-description Textile powerhouse Glen Raven partnered with Smashing Boxes to simplify internal coordination of events team members attend and host worldwide. The result is a highly social web and mobile application that greatly improves internal communication with real-time notifications, photo sharing, and event details all in one spot.
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/top_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/top_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/top_slide4.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/top_slide1.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.main.small-centered
+      h5.centered The Idea
+      .large-8.columns
+        p Imagine coordinating hundreds of events annually, each with dozens of internal attendees. You send a flood of emails to keep each person informed of changes to the agenda while your colleagues back at the office are left in the dark. Successes are masked by a lack of transparency, and your sales team is less efficient without a clear sense of direction.
+        p These were the challenges Glen Raven’s event team faced before partnering with Smashing Boxes to build EventSpot. With a strong sense of purpose, we set out to create an app that would streamline communication and breathe life into Glen Raven’s culture.
+      .large-8.columns
+        .video-wrapper
+          iframe#glenraven-idea(allowfullscreen="", frameborder="0", height="281", mozallowfullscreen="", src="//player.vimeo.com/video/102930751?api=1&player_id=glenraven-idea", webkitallowfullscreen="", width="500")
+
+  section.section-white.theme-block-3
+    .row.large-15.columns.main.small-centered
+      h5.centered Design & Development
+      .large-8.columns
+        .video-wrapper
+          iframe#glenraven-design(allowfullscreen="", frameborder="0", height="281", mozallowfullscreen="", src="//player.vimeo.com/video/102930753?api=1&player_id=glenraven-design", webkitallowfullscreen="", width="500")
+      .large-8.columns
+        p As always, we focused on the end user. During the discovery phase, our lead iOS developer traveled to a tradeshow with Glen Raven’s events team to gain a deeper understanding of their needs and the functionality that could be built to accommodate them. Knowing that internal communication and usability were key for success, our user experience team designed a straightforward interface that would give users personalized information upfront. To accommodate mobile devices that may not have a data plan, our iOS team developed a system for syncing event documents, such as travel itineraries or event agendas, so they would be available immediately upon download. 
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/bottom_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/bottom_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/bottom_slide4.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/GlenRaven/bottom_slide1.jpg')
+
+
+  section.section-pink.theme-block-4
+    .row.large-15.columns.small-centered
+      h5.centered The Result
+      .large-8.columns
+        p EventSpot makes it incredibly simple to view the agenda and reservation details, receive notifications, upload and view pictures, and view user profiles. Updates are tailored to the individual so users only receive information relevant to them, and the event team can control all content from a custom-built, open-source CMS called Cardboard. The real-time news feed has helped to shape a culture around each event, and successes are now shared easily throughout the company. The result is a web and mobile application that has improved communication and visibility throughout Glen Raven. 
+      .large-8.columns
+        .video-wrapper
+          iframe#glenraven-result(allowfullscreen="", frameborder="0", height="281", mozallowfullscreen="", src="//player.vimeo.com/video/102930754?api=1&player_id=glenraven-result", webkitallowfullscreen="", width="500")
+
+  section.section-white.theme-block-5
+    .row.large-15.columns.small-centered
+      .large-8.columns
+        .video-wrapper
+          iframe#glenraven-partnership(allowfullscreen="", frameborder="0", height="281", mozallowfullscreen="", src="//player.vimeo.com/video/102930755?api=1&player_id=glenraven-partnership", webkitallowfullscreen="", width="500")
+      .large-7.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span Both our client’s success and our own are innately linked. This is why delivering the best possible product for our client is our ultimate goal. We are partners from day one.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          | Brian Fischer, 
+          span.title Co-Founder and COO
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_glenraven"

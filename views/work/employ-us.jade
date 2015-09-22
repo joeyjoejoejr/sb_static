@@ -1,0 +1,87 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "EmployUs";
+    })[0]
+
+  section.section-grey.case-study-header(style="background-image: url('/img/work/case-studies/EmployUs/cover.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 100%;")
+    .large-13.columns.centered.main.small-centered
+      h1= case_study.headerTitle
+      h5 EmployUs Inspires Change In A Tired Market
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/case-studies/EmployUs/logo.png")
+      .case-study-description
+        | As the world embraces the sharing economy with services like RedFin, AirBNB and Uber, a new kid on the block is seizing an opportunity to disrupt a $416B* industry ripe for change. 
+        p.small
+          | *
+          a(href="http://www.staffingindustry.com/eng/content/download/153254/6014228/Largest_Global_Staffing_Firms_2013.pdf") Largest Global Staffing Firms 2013.pdf
+      a.button(href="https://appsto.re/us/SOnb5.i", target="_blank") Get the app
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/top_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/top_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/top_slide2.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.main.small-centered
+      h5.centered A Big Idea from the Start
+      p Staffing is an industry desperate for modernization. Steep recruiter fees, a push toward mobile and social, and an ongoing struggle to find skilled candidates are all contributing to this need for change. A need that grabbed the attention of social entrepreneurs, Ryan O’Donnell and Jeff Stocks. Their mission: help people find work.
+      p The idea was big from the beginning - smash the formalities of traditional recruiting by embracing the principles of the sharing economy. Say goodbye to recruiters with outlandish fees. Say hello to helping your friends find the right jobs - and getting paid for it - with just a few clicks.
+
+  section.section-white.theme-block-3
+    .row.large-15.columns.main.small-centered
+      h5.centered A Solution Rooted in User Experience
+      p Changing jobs is a highly personal, often emotional, decision. Treating a personal decision like a business transaction is where traditional recruiting has misstepped. Empathy would be required in spades - and we were up to the task. 
+      p From the start, we considered how multiple user types - employers, connectors, and candidates - would experience the application. To do this, we honed in on the emotional drivers at play. Employers need to find qualified candidates quickly without breaking the bank, connectors want to help their friends while making some extra cash, and candidates need to understand and trust the application within seconds. Across the board, our users would need it to be simple, accessible, and credible.
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/bottom_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/bottom_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/bottom_slide4.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/EmployUs/bottom_slide1.jpg')
+
+  section.section-white.theme-block-5
+    .row.large-15.columns.small-centered
+      .large-16.columns
+        h5.centered People First
+        p When you identify what is most important - people - and put them first, the path forward becomes quite clear. Concentrating on the basic needs of each user helped our multi-disciplinary team prioritize the most vital features early on and then plan future iterations based on direct user feedback. And knowing that our users would want to use the app on the go made the choice to go mobile first an easy one.
+        p Keeping people front and center gave EmployUs an edge, helping them win the competitive NC Idea Grant and secure enough funding to finance future iterations of their product.
+
+  section.section-white.theme-block-5
+    .row.large-15.columns.small-centered
+      .large-16.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span Inspired by the notion that human connection is everything, we shaped the brand using cheerful colors that trigger feelings of hope and optimism. It’s been fun bringing a sense of personality to what can often feel like a sterile and distant field. Through a friendly tone and bold but approachable typography, we’ve built earnest sensibility into the process of referring your friends to jobs.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          | Doug Ransdell, 
+          span.title Visual Designer
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_employus"

@@ -1,0 +1,67 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "Dognition";
+    })[0]
+
+  section.section-grey.case-study-header 
+    .blur-img
+      div(style="background-image: url(#{asset(case_study.background)})")
+    .large-13.columns.centered.main.small-centered
+      h1= case_study.headerTitle
+      h5= case_study.headerSubtitle
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/projects/Dognition/dognition_logo.png")
+      .case-study-description Smashing Boxes partnered with McKinney and Canines Inc. to build Dognition, a web application that uses cognition-based games to help dog owners learn about the temperament and learning style of their furry friend.
+      a.button(href="http://dognition.com", target="_blank")
+        | See Dognition.com
+        span
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/top_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/top_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/top_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/top_slide4.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.main.small-centered
+      h5.centered Development
+      p McKinney and Canines Inc. tapped Smashing Boxes to develop a website and checkout process for their Dognition web application in a hurry. With such a tight deadline, partnership with both entities was crucial to the project’s success. Our developers quickly set up shop under McKinney’s roof and prioritized the improvement of the reliability, performance, and deployment of the application using Ruby on Rails as the primary technology. 
+      p Thanks to a tremendous team effort, our development team delivered several milestones quickly, including the implementation of a custom marketing automation tool using the client's preferred cloud-based provider. Through collaboration with that provider, we tailored the service for Dognition’s unique requirements so that email marketing campaigns could be personalized for each end user. For ease of content editing, we integrated with our client’s preferred Content Management System (CMS) so they could continue to rapidly produce content throughout the site.
+      p Due to the high-profile nature of the client and subsequent media attention, it was essential to ensure high availability of the site and limited downtime. To this end, we enabled their service to scale with rapid, no down-time deployment. Finally, we ensured responsiveness across multiple devices and high availability. The hustle and collaboration paid dividends for the client, culminating in a CBS This Morning broadcast that sparked heavy media attention for Dognition. 
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/bottom_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/bottom_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/bottom_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/projects/Dognition/bottom_slide4.gif')
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_dognition"
