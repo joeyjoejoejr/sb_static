@@ -1,0 +1,117 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "Actual ID";
+    })[0]
+
+  section.section-grey.case-study-header(style="background-image: url('/img/work/case-studies/ActualID/actual_id_header.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 100%;")
+    video.case-study-video(autoplay="", loop=true, autobuffer=true, poster="/img/work/case-studies/ActualID/actual_id_header.jpg")
+      source(src="/videos/work/case-studies/ActualId/AID.mp4", type="video/mp4")
+      source(src="/videos/work/case-studies/ActualId/AID.webm", type="video/webm")
+
+    .large-12.columns.centered.main.small-centered
+      h1= case_study.headerTitle
+      h5= case_study.headerSubtitle
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/case-studies/ActualID/actual_id_logo.png")
+      .case-study-description Biometrics technologist Actual iD partnered with Smashing Boxes to deliver integrative cloud-based software to its customers with multi-location businesses. Its manager-friendly web application caters to the auto industry but has the capability to scale across multiple industries as Actual iD experiences continued success.
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/top_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/top_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/top_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/top_slide4.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.main.small-centered
+      h5.centered The Idea
+      p Imagine that you employ numerous hourly employees for your business, and you need to track their time honestly and accurately for payroll. Additionally, you know you could cut costs and improve efficiency if you had insight into schedule compliance, over-time, and time theft. Now zoom out and envision this need compounded across tens or hundreds of locations.
+      p These are the problems Actual iD – a biometrics technologist based in Toronto, Canada - solves for its customers in the auto industry. To deliver greater value to their customers, they asked Smashing Boxes to build a custom web application that would integrate with their biometric hardware and store data in the cloud. Integration with Actual iD’s API was key, as was designing an intuitive and manager-friendly interface.
+
+  section.section-white.theme-block-3
+    .row.large-15.columns.main.small-centered
+      h5.centered Experience Design 
+      .large-7.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span Working in close contact with an engaged, knowledgeable client allowed us to judiciously work through multiple potential solutions. This open communication helped all parties to unlock the value behind this idea.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          -
+            var author = contentful.employees.filter(function(employee) {
+              return employee.name === "Dante Passera";
+            })[0]
+
+          a(href=author._url) Dante Passera,
+          span.title Director of Experience Design
+      .large-8.columns
+        p Experience design was a crucial element in unlocking the potential value of this solution. Daily work sessions and reviews with the client over a six-week period allowed for nearly real-time feedback and revision. Through this iterative collaboration, we uncovered functionality that places pertinent information in front of managers so they can spend less time managing details, and more time running their business. This information could be insight into general HR data such as employee attendance, schedules, overtime and leave, as well as trends, such as compliance, time theft, or scheduling conflicts. For the application to be effective, it was vital that we engineered the product to be flexible enough to support multiple organizational frameworks. 
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/bottom_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/bottom_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/bottom_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/ActualID/bottom_slide4.jpg')
+
+  section.section-white.theme-block-4
+    .row.large-15.columns.main.small-centered
+      h5.centered Development
+      .large-8.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span Actual iD is one of the most challenging and complex applications I've worked on. To meet this challenge we strove for a complete separation between the concerns of business logic, persistence mechanism, and delivery mechanism. Using Clean Architecture we were able to manage all this complexity and ensure that all business needs were met.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          -
+            var author = contentful.employees.filter(function(employee) {
+              return employee.name === "Reed Law";
+            })[0]
+
+          a(href=author._url) Reed Law,
+          span.title Back End Developer 
+      .large-7.columns
+      p Accounting for unpredictability in human behavior was a major challenge in developing the application. For instance, employees will not always show up or leave as scheduled. To attack this problem, our engineers and experience designers had to think like auto-dealership managers. What were their pain points? And what frustrations of their job could be automated?
+
+  section.section-pink.theme-block-5
+    .row.large-15.columns.small-centered
+      h5.centered The Result
+      .large-8.columns
+        p Our highly iterative design and development process resulted in an application that provides easy time-scheduling and tracking capabilities across multiple locations, making payroll for a multi-location car dealership a relative cinch despite unpredictabilities with human behavior. Actual iD automates the capture of time and attendance so that managers can spend less time dealing with time clock issues and more time helping customers, coaching employees, and improving sales. This drives efficiencies for Actual iD’s customers and puts money back in their pockets.
+      .large-7.columns.quote
+          p
+            i.icon-sb-open-quotes.quote-mark
+            span Our largest challenge was creating programming logic that was smart enough to account for the unpredictability of real world human behavior. But the result is a piece of software that helps managers solve everyday business problems.
+            i.icon-sb-closed-quotes.quote-mark
+          p.author
+            | Carolyn Frazier,
+            span.title Senior Project Manager
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_actualid"

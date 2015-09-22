@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  section.section-white.work-header
+    - var featured_study = sample(contentful.featured_case_studies)
+    .case-study
+
+    .blur-img
+      div(style='background-image: url(#{asset(featured_study.background)});')
+      .blur
+    .large-10.columns.centered.small-centered
+      h1=featured_study.headerTitle
+      h5=featured_study.headerSubtitle
+
+      a.button.featured-work(href="/work/#{featured_study.url}") View Project
+
+  section.section-white.projects-header
+    .row
+      .large-14.columns.main.centered.small-centered
+        .content-header.centered
+          h5 Our Work
+        hr
+        .projects
+          ul
+            each study in contentful.case_studies
+              li
+                img(src=asset(study.image, { w: 450, h: 451, fit: "crop" }))
+                img.logo(src=asset(study.logo, { w: 450, h: 451, fit: "crop" }))
+                .overlay
+                  .info
+                    .title=study.headerTitle
+                    a(href="/work/#{study.url}") View Case Study
+
+        .content-header.centered
+          h5 Work In Progress
+        hr
+        #dribbble-container.social.long
+          .post
+              ul.large-block-grid-3.medium-block-grid-2.small-block-grid-1

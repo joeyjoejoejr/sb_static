@@ -1,0 +1,26 @@
+-
+  var index = contentful.case_studies.indexOf(case_study),
+    prev_case_study = contentful.case_studies[index - 1],
+    next_case_study = contentful.case_studies[index + 1];
+
+  next_case_study = next_case_study || contentful.case_studies[0];
+
+section.section-white.more-work
+  .row.centered
+    h5 More Work
+
+    if prev_case_study
+      .case-study-nav
+        .case-study-nav-item
+          a(href="/work/#{prev_case_study.url}")
+            span.case-study-title= prev_case_study.headerTitle
+            br
+            span.case-study-headline= prev_case_study.headerSubtitle
+
+    if next_case_study
+      .case-study-nav
+        .case-study-nav-item
+          a(href="/work/#{prev_case_study.url}")
+            span.case-study-title= next_case_study.headerTitle
+            br
+            span.case-study-headline= prev_case_study.headerSubtitle

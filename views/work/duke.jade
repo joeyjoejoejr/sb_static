@@ -1,0 +1,117 @@
+extends ../layout
+
+block content
+  -
+    var case_study = contentful.case_studies.filter(function(study) {
+      return study.title === "Duke";
+    })[0]
+
+  section.section-grey.case-study-header(style="background-image: url('/img/work/case-studies/DukePlaybook/PP.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 100%;")
+    video.case-study-video(autoplay="", loop=true, autobuffer=true, poster="/img/work/case-studies/DukePlaybook/PP.jpg")
+      source(src="/videos/work/case-studies/DukePlaybook/DPP.webm", type="video/webm")
+      source(src="/videos/work/case-studies/DukePlaybook/DPP.mp4", type="video/mp4")
+
+    .large-12.columns.centered.main.small-centered
+      h1= case_study.headerTitle
+      h5= case_study.headerSubtitle
+
+  section.section-grey.theme-block-1
+    .row.large-9.columns.centered.main.small-centered
+      img(src="/img/work/case-studies/DukePlaybook/playbook_logo.png")
+      .case-study-description Following a diligent search for the right creative partner, Duke chose Smashing Boxes to create an interactive web application encouraging collaboration between public health and primary care. The result is a scalable and community-centric application that marries high-level research with routine primary care practices to improve healthcare outcomes.
+      a.button(src="http://practicalplaybook.org", target="_blank")
+        | See PracticalPlaybook.org
+        span
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/bottom_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/bottom_slide2.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/bottom_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/bottom_slide4.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/bottom_slide5.jpg')
+
+  section.section-white.theme-block-2
+    .row.large-15.columns.main.small-centered
+      h5.centered The Idea
+      .large-8.columns
+        p With the challenge of engaging two distinct audiences within the health community, Duke was after a highly collaborative site that would speak to both user types and allow for immense flexibility as users and their challenges evolved. Design and user experience would become driving forces for encouraging communication between these two groups and establishing a brand for the Playbook.
+      .large-7.columns.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span We had to speak two different languages in one website, with primary care looking at individual patients day-to-day and public health concerned with the bigger picture. All of the users value health, but they have a completely different outlook. It was a unique challenge to cater to two separate audiences.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          -
+            var author = contentful.employees.filter(function(employee) {
+              return employee.name === "Carolyn Frazier";
+            })[0]
+
+          a(href=author._url) Carolyn Frazier,
+          span.title Senior Project Manager
+        a.author-ideas(href="/ideas/four-tips-for-effective-project-management")
+          | Read More From Carolyn on Effective Project Management
+          i.image-prev.disabled.icon-sb-next
+
+  section.section-white.theme-block-3
+    .row.large-15.columns.main.small-centered
+      h5.centered An Evolution
+      p User feedback and flexibility were our guiding principles from the start. Before development began, a team member from Duke and one of our technologists traveled to health conferences around the country to engage in conversation with both primary care and public health professionals. The result was over 40 hours of video footage capturing feedback from potential users, a confident partnership with Duke, and a clearly defined project scope.
+      .large-12.columns.small-centered.quote
+        p
+          i.icon-sb-open-quotes.quote-mark
+          span Our team took great care to determine the user goals of a complex and demanding user group through research, extensive in-person user testing, and rapid iteration within a highly collaborative environment. It was this collaboration, both internally among designers and developers and with the client, that led to a strong user-centered end product.
+          i.icon-sb-closed-quotes.quote-mark
+        p.author
+          -
+            var author = contentful.employees.filter(function(employee) {
+              return employee.name === "Lucas Brauer";
+            })[0]
+
+          a(href=author._url) Lucas Brauer,
+          span.title Experience Designer
+      p Upon design and development, great care was taken to ensure users could navigate through the content heavy site freely and naturally, without getting stuck on one page. Scalability remained a focal point, ensuring content could be easily added by a growing user community. To track progress, custom reporting tools were developed that give Duke an intimate look at user behavior and trends.
+
+  section
+    .carousel.js-slider
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide1.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide2.gif')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide3.jpg')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide4.gif')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide5.gif')
+      .slide
+        .slide-image-wrapper
+          img.background(src='/img/work/case-studies/DukePlaybook/top_slide6.jpg')
+
+  section.section-pink.theme-block-4
+    .row.large-15.columns.small-centered
+      h5.centered The Result
+      p Visitors are welcomed to the Practical Playbook with simple visuals and a soft, approachable color palette. An animated venn diagram hints at the integrative nature of the application and the overarching goal of sharing knowledge and learning from others. As users navigate further into the site, they are prompted to learn about various collaborative projects, start their own project, and finally share the results. The experience is one that leads users back to the site time and time again to share knowledge and make a noticeable impact in the healthcare community. 
+
+  include ./_creators.jade
+  include ./_hiring.jade
+  include ./_work_nav.jade
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "case_study_duke"

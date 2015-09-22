@@ -18,6 +18,7 @@ module.exports =
   locals:
     marked: marked
     trunc: lodash.trunc
+    sample: lodash.sample
 
   extensions: [
     contentful(config)

@@ -8,8 +8,7 @@ block content
           .project-description
             h1=case_study.headerTitle
             p.byline=case_study.headerSubtitle
-            a.view-more.button(href="work/#{case_study.title}") View Project
-            // a.view-more.button href="#{case_study.url}" View Project
+            a.view-more.button(href="/work/#{case_study.url}") View Project
 
   section.section-white.services
     .row.main
@@ -86,7 +85,7 @@ block content
 
   section.section-white.social
     .row.columns.small-centered
-      #dribbble-container
+      #dribbble-container.short
         .content-header.centered
           h5 Dribbble
         hr

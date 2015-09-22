@@ -1,9 +1,16 @@
 $(document).on "ready page:load", ->
-  $.getJSON "http://api.dribbble.com/players/smashingboxes/shots?callback=?"
-    .done (data) ->
-      shots = data.shots.slice 0, 3
-      for shot in shots
-        $("#dribbble-container ul").append "<li class=\"item\"><a href=#{shot.url} target=\"_blank\"><img src=\"#{shot.image_url}\"></a></li>"
+  runDribbble = (number) ->
+    $.getJSON "http://api.dribbble.com/players/smashingboxes/shots?callback=?"
+      .done (data) ->
+        shots = data.shots.slice 0, number
+        for shot in shots
+          $("#dribbble-container ul").append "<li class=\"item\"><a href=#{shot.url} target=\"_blank\"><img src=\"#{shot.image_url}\"></a></li>"
+
+  if $("#dribbble-container.short").length > 0
+    runDribbble(3)
+
+  if $("#dribbble-container.long").length > 0
+    runDribbble(9)
 
   windowsize = $(this).width()
   if windowsize > 640
