@@ -1,0 +1,42 @@
+section.section-pink.ideas-header
+  div.banner-carousel.owl-carousel.owl-theme
+    each featured_post in contentful.featured_blog_posts
+      -
+        var post = contentful.blog_posts.filter(function(post) {
+          return post.sys.id === featured_post.sys.id;
+        })[0];
+
+      .item(style="background-image: url(#{asset(post.image)});")
+        .blur.overlay
+        .gradient.overlay
+        .post-details
+          h1= post.title
+          a.view-more.button(href=post._url) Read
+
+section.section-white.ideas-quote
+  .row.main.centered
+    h5 Our Curated Thoughts On Everything Digital
+
+section.section-white.ideas-posts
+  .posts-category(data-category=category)
+  .row.large-16.columns.small-centered.centered
+    .ideas-nav
+      .button-group
+        a.button.pushstate(href="/ideas" data-category="all") show all
+        each category in contentful.categories
+          a.button.pushstate(data-category=category.slug, href=category._url)= category.name
+    .ideas-nav-mobile
+      .button-group
+        a.button.pushstate.category(data-dropdown="categories")
+          | Categories
+          .triangle-down
+        .categories
+          #categories.f-dropdown(data-dropdown-content="", data-dropdown="categories")
+            a.button.pushstate(href="/ideas" data-category="all") show all
+            each category in contentful.categories
+              a.button.pushstate(data-category=category.slug, href=category._url)= category.name
+
+  .row
+    .large-16.columns.blog-posts.centered
+      ul
+        include ./_posts.jade

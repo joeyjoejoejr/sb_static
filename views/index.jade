@@ -73,7 +73,12 @@ block content
 
   section
     #home-carousel.carousel.js-slider
-      each post in contentful.featured_blog_posts
+      each featured_post in contentful.featured_blog_posts
+        -
+          var post = contentful.blog_posts.filter(function(post) {
+            return post.sys.id === featured_post.sys.id;
+          })[0];
+
         .slide
           .slide-image-wrapper
             .overlay
@@ -81,7 +86,7 @@ block content
           .slide-container
             .large-7.small-16.columns.small-centered
               h2.blog-title= post.title
-              a.button.blog-button(href="#") See Out Latest Idea
+              a.button.blog-button(href=post._url) See Out Latest Idea
 
   section.section-white.social
     .row.columns.small-centered

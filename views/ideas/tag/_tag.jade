@@ -1,0 +1,12 @@
+extends ../../layout
+
+block content
+  if entry.posts
+    -
+      var category = "";
+      ids = entry.posts.map(function(post) { return post.sys.id; });
+      posts = contentful.blog_posts.filter(function(post) {
+        return ids.indexOf(post.sys.id) > -1;
+      });
+
+    include ../_posts_index.jade

@@ -1,0 +1,132 @@
+extends ../layout
+
+// - content_for :seo do
+//   title = "#{(@post.category.try(:name) || "Smashing Boxes") + " | "}#{@post.tags.map(&:name).join(" | ") + " | "if @post.tags.present? }#{@post.title}"
+//   - if @post.summary.present?
+//     meta name="description" content=@post.summary
+
+block content
+  - var author
+  section.section-pink.single-ideas-header
+    .blur-img
+      div(style='background-image: url(#{asset(entry.image)});')
+      .blur
+
+    .image-gradient
+    .row
+      .large-14.columns.main.small-centered
+        h3
+          =entry.title
+
+        .mugshot
+          if entry.authors && entry.authors.length > 0
+            | by
+            span.author-name
+              -
+                author = contentful.employees.filter(function(employee) {
+                  return employee.sys.id === entry.authors[0].sys.id
+                })[0]
+
+              if author
+                img(src= asset(author.mugshot, { w: 39, h: 39 }))
+                a(href=author._url)= author.name
+          else
+            -
+              author = contentful.employees.filter(function(employee) {
+                return employee.name == entry.authorName
+              })[0]
+
+            if author
+              span.author-name
+                img(src= asset(entry.authors[0].fields.mugshot))
+                a(href=author._url)= author.name
+            else
+              span.author-name= entry.author_name
+
+          if entry.category
+            -
+              var category = contentful.categories.filter(function(category) {
+                return category.sys.id === entry.category.sys.id;
+              })[0];
+
+            a(href= category._url)= category.name
+          - var published = new Date(entry.published);
+          span.date #{published.getMonth() + 1}.#{published.getDate()}.#{published.getFullYear()}
+
+  -
+    var index = contentful.blog_posts.indexOf(entry),
+      prev_post = contentful.blog_posts[index - 1],
+      next_post = contentful.blog_posts[index + 1];
+
+  section.section-white.single-ideas-post
+    .row
+      .large-14.columns.centered.next-prev.small-centered
+        ul
+          if prev_post
+            li
+              a.prev(href=prev_post._url)
+                i.image-prev.icon-sb-prev
+                | Previous
+          else
+            li
+              i.image-prev.disabled.icon-sb-prev
+              span Previous
+
+          li.close
+            a.image-close(href="/ideas")
+              i.image-close.icon-sb-close
+              span Close
+
+          if next_post
+            li
+              a.next(href=next_post._url)
+                | Next
+                i.image-prev.icon-sb-next
+          else
+            li
+              span Next
+              i.image-prev.disabled.icon-sb-next
+
+    .row
+      .large-16.columns.main.small-centered
+        .tags
+          - var tags = entry.tags || []
+          each post_tag, index in tags
+            -
+              var tag = contentful.tags.filter(function(tag) {
+                return tag.sys.id === post_tag.sys.id;
+              })[0];
+
+            if index != 0
+              = " \\ "
+            a(href=tag._url)= tag.name
+
+        hr.clearfix
+        !=marked(entry.body)
+
+    .row
+      .large-10.columns.main.small-centered
+        #disqus_thread
+
+  if author && author.posts
+    section.section-grey.ideas-other
+      .author-image.centered
+        img(src=asset(author.mugshot, { w: 231, h: 231 }), alt=author.mugshot_alt_text)
+      .row
+        .large-14.columns.small-centered.main
+          h4 Other Ideas
+          ul
+            each author_post in author.posts
+              -
+                var post = contentful.blog_posts.filter(function(post) {
+                  return post.sys.id ===  author_post.sys.id;
+                })[0];
+
+              if post
+                li
+                  a(href=post._url)
+                    =trunc(post.title, { "length": 40, "separator": " " })
+
+  script.
+    var body = document.getElementsByTagName("body")[0]
+    body.className = body.className + "blog_posts_post"

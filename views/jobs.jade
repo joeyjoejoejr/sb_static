@@ -1,0 +1,92 @@
+extends layout
+
+block content
+  section.section-pink.jobs-header
+    .blur-img
+      div(style='background-image: url("/img/jobs/header_bg.jpg");')
+      .blur
+    .large-12.columns.main
+      h1 in times of great change, the future belongs to the learners.
+    .large-16.columns
+      .large-3.columns.right
+        p.author &mdash; Eric Hoffer
+
+  section.section-white.jobs-quote
+    .row.main.centered
+      h5 At Smashing Boxes we value:
+      .large-14.small-16.columns.small-centered.centered
+        .values-container
+          .value.columns
+            .knowledge
+              .header-icon
+                i.icon-sb-knowledge
+              h5 Knowledge
+              p As professionals, we are constantly growing in our knowledge. We are undeterred by a skill yet to be mastered or a path waiting to be discovered. 
+          .value.columns
+            .creativity
+              .header-icon
+                i.icon-sb-creativity
+              h5 Creativity
+              p We're creative, ambitious, and determined. We appreciate tradition and structure but we don't bend to them at the cost of limiting our creativity.
+          .value.columns
+            .quality-of-life
+              .header-icon
+                i.icon-sb-quality
+              h5 Quality of Life
+              p We perceive professional development and culture as an intrinsic component of our quality of life.
+
+  section.section-pink.jobs-listings
+    .row
+      .large-10.columns.main.small-centered.centered
+        h5 like what you see? 
+        p Check out the open positions listed below and even if you don't find a current opening that matches your skill set, shoot us an email at careers@smashingboxes.com. We're always hiring standout people.
+    .large-16.columns.centered.listings
+      .listing-accordion
+        ul
+          each job in contentful.jobs
+            li.job-listing
+              a(href="#")
+                h4= job.title
+                hr
+                span.listing-arrow Open or Close
+              .arrow
+                .down
+              .listing-content
+                .row.small-centered.centered
+                  .large-12.columns.small-centered
+                    p
+                      != marked(job.description)
+                    if job.responsibilities
+                      .columns
+                        p.headline Daily Responsibilities Include:
+                        != marked(job.responsibilities)
+                    if job.looking_for
+                      .columns
+                        p.headline What We're Looking For:
+                        != marked(job.looking_for)
+                    .clearfix
+                    p.callout And Perks?!
+                    p
+                      | Creativity and innovation are fueled by a little R&R. We value work-life balance above all else and bake it right in with benefits like:
+                    ul.columns
+                      li 10 paid holidays (includes your birthday off!)
+                      li 15 days of paid vacation accrued your first year, 20 days after three years, and 25 days after five
+                    p We are a family and families take care of each other. We prove it with benefits like:
+                    ul.columns
+                      li Full health and dental coverage
+                      li Short- and long-term disability insurance
+                      li Honor system sick time
+                      li Flexible work schedule including work from home options
+                      li Generous bereavement and paternity/maternity leave
+                    p Plus we've got all the basics covered; and then some:
+                    ul.columns
+                      li Simple IRA with 3% company match
+                      li Coffee, snacks, beer on tap from local breweries
+                      li Innovation time every Friday afternoon
+                      li Ongoing learning opportunities and support
+                    .clearfix
+                    h5.callout.text-left 
+                      | Ready to smash things? Send us your resume, links to your work, and your theories on the space-time continuum. Only kidding, a description of why you're awesome will do just fine. 
+                      br
+                    a.button(href="mailto:careers@smashingboxes.com", data-title="Submit Application") Submit Application
+

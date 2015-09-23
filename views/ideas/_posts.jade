@@ -1,0 +1,9 @@
+each post in posts
+  li.post.item
+    img(src=asset(post.image, { w: 270, h: 200, fit: "crop" }), alt= post.image_alt_text)
+    .overlay
+      h5 
+        a.post-title(href=post._url)= trunc(post.title, { "length": 60, "separator": " " })
+      - var published = new Date(post.published);
+      span.date #{published.getMonth() + 1}.#{published.getDate()}.#{published.getFullYear()}
+      a.see-more(href=post._url) Read

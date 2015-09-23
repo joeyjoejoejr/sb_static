@@ -1,0 +1,97 @@
+extends layout
+
+block content
+  section.section-pink.contact-header
+    .blur-img
+      div(style='background-image: url("/img/contact/header_bg.jpg");')
+      .blur
+
+    .large-12.columns.main
+      h1 A dream you dream alone is only a dream. A dream you dream together is reality.
+    .large-16.columns
+      .large-3.columns.right
+        p.author &mdash; John Lennon
+
+  section.section-white.personnel
+    .row.main.centered
+      .columns.small-centered.single-personnel
+        .contact-container
+          .headline
+            div
+              h6 Have A Project?
+          a.contact-biz(href="mailto:biz@smashingboxes.com")
+            i.icon-sb-business-dev
+          p.title Business Development
+          hr
+          a.contact-biz(href="mailto:biz@smashingboxes.com")
+            | biz@smashingboxes.com
+
+        .contact-container
+          .headline
+            div
+              h6 We're hiring outliers.
+          a.contact-careers(href="mailto:careers@smashingboxes.com")
+            i.icon-sb-mark-contact
+          p.title Careers
+          hr
+          a.contact-careers(href="mailto:careers@smashingboxes.com")
+            | careers@smashingboxes.com
+
+        .contact-container
+          .headline
+            div
+              h6 The haps on the craps.
+          a.contact-press(href="mailto:press@smashingboxes.com")
+            i.icon-sb-pr
+          p.title Media
+          hr
+          a.contact-press(href="mailto:press@smashingboxes.com")
+            | press@smashingboxes.com
+
+      .office-container.office-hq.small-centered
+        .large-8.columns
+          i.icon-sb-mark.logo-alt
+          .headline
+            div
+              h5 Durham - HQ
+              ul.contact
+                li Diamond View III Building
+                li 359 Blackwell Street - Suite 240
+                li Durham, NC 27701
+                li
+                  span p. 
+                  a(href="tel:+18557627446")
+                    | 1-855-762-7446
+        .large-7.columns
+          a(href="https://www.google.com/maps/place/359+Blackwell+St/@35.992722,-78.903938,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace46cf2455507:0x223c8b5d8535814f", target="_blank")
+            img.map(src="/img/contact/smashingboxes_durham.jpg")
+      .clearfix
+
+      .large-14.columns.small-centered.office-container-other
+        .office-container.columns.office-other
+          i.icon-sb-mark.logo-alt
+          .headline
+            div
+              h5 Montreal - QC
+              ul.contact
+                li &nbsp;
+                li Coming Soon
+                li
+                  span p. 
+                  a(href="tel:+18557627446")
+                    | 1-855-762-7446
+          img.map(src="/img/contact/smashingboxes_montreal.gif")
+        .office-container.columns.office-other
+          i.icon-sb-mark.logo-alt
+          .headline
+            div
+              h5 San Francisco
+              ul.contact
+                li 156 2nd Street
+                li San Francisco, CA 94105
+                li
+                  span p. 
+                  a(href="tel:+18557627446")
+                    | 1-855-762-7446
+          a(href="https://www.google.com/maps/place/156+2nd+St,+San+Francisco,+CA+94105/@37.7871905,-122.3990266,17z/data=!3m1!4b1!4m2!3m1!1s0x8085807d24573f87:0x7bf6f7dc8840a684", target="_blank")
+            img.map(src="/img/contact/smashingboxes_sanfran.gif")
